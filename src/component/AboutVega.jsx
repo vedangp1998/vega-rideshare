@@ -21,8 +21,9 @@ const AboutVega = () => {
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
-        minHeight: "529px",
-        px: 4,
+        // minHeight: "529px",
+        height: "auto",
+        p: 8,
       }}
     >
       {/* Left Side Image */}
@@ -32,10 +33,10 @@ const AboutVega = () => {
         alt="Vega App"
         sx={{
           position: "absolute",
-          left: 0,
-          top: "30%",
+          top: { xs: "87%", sm: "65%", md: "42%", lg: "30%" },
+          left: { xs: "62%", sm: "80%", md: 0 },
           transform: "translateY(-50%)",
-          width: { xs: "150px", md: "600px" },
+          width: { xs: "150px", sm: "180px", md: "480px", lg: "530px" },
           height: "auto",
           objectFit: "contain",
         }}
@@ -54,12 +55,20 @@ const AboutVega = () => {
         }}
       >
         <Typography
-          sx={{ fontSize: "40px", fontWeight: 700, lineHeight: "44px" }}
+          sx={{
+            fontSize: { xs: "30px", md: "34px", lg: "40px" },
+            fontWeight: 700,
+            lineHeight: "44px",
+          }}
         >
           About Our Vega App
         </Typography>
         <Typography
-          sx={{ fontSize: "20px", fontWeight: 500, lineHeight: "24px" }}
+          sx={{
+            fontSize: { xs: "16px", md: "18px", lg: "20px" },
+            fontWeight: 500,
+            lineHeight: "24px",
+          }}
         >
           Vega is a ride-hailing company with a mission to empower
           <br />
