@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./component/Header";
 import React from "react";
-import WelcomePage from "./component/WelcomePAge";
+import WelcomePage from "./component/WelcomePage";
 import { Box } from "@mui/material";
 import AboutVega from "./component/AboutVega";
 import BookingProcess from "./component/BookingProcess";
