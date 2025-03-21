@@ -298,7 +298,7 @@ const Footer = () => {
             }}
           >
             <Typography variant="caption" sx={{ color: "#aaa" }}>
-              © 2023 <span style={{ color: "#fff" }}>VegaRide Share</span>. All
+              © 2025 <span style={{ color: "#fff" }}>VegaRide Share</span>. All
               rights reserved.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: { xs: 1, sm: 0 } }}>
