@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import IphoneTopImage from "../assets/iphoneTop.svg";
+import IphoneTopImage from "../assets/IphoneTop.svg";
 import IphoneBottomImage from "../assets/iphoneBottom.svg";
 
 const BookingProcess = () => {
