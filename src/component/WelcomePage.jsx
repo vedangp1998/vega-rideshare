@@ -41,9 +41,9 @@ const WelcomePage = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "32px", sm: "48px", md: "44px", lg: "56px" },
+              fontSize: { xs: "32px", sm: "40px", md: "40px", lg: "49px" },
               fontWeight: 700,
-              lineHeight: { xs: "40px", sm: "50px", md: "60px" },
+              lineHeight: { xs: "40px", sm: "50px", md: "54px" },
             }}
           >
             <span style={{ color: "#FF8C00" }}>Welcome to Vega</span> <br />
@@ -72,7 +72,7 @@ const WelcomePage = () => {
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "780px", md: "800px", lg: "820px" },
+            width: { xs: "100%", sm: "780px", md: "800px", lg: "800px" },
             height: "auto",
             mb: 14,
           }}
