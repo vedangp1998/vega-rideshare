@@ -50,11 +50,19 @@ const Benifit = () => {
         alignItems: "center",
         justifyContent: "space-between",
         height: "auto",
-        gap: 12,
-        marginY: "120px",
+        gap: 8,
+        marginY: { lg: "120px", mg: "80px", sm: "70px", xs: "60px" },
       }}
     >
-      <Box textAlign="center">
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: 2,
+        }}
+      >
         <Typography
           sx={{
             fontSize: { xs: "30px", sm: "35px", md: "40px" },
@@ -69,11 +77,13 @@ const Benifit = () => {
             fontSize: { xs: "16px", sm: "18px", md: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
+            maxWidth: "550px",
+            width: "auto",
+            // width: { lg: "550px", xs: "auto", sm: "400px", md: "499px" },
           }}
         >
-          Vega is a ride-hailing company with a mission to empower<br></br>{" "}
-          drivers while providing passengers with affordable and <br></br>{" "}
-          reliable rides.
+          Vega is a ride-hailing company with a mission to empower drivers while
+          providing passengers with affordable and reliable rides.
         </Typography>
       </Box>
       <Box
@@ -81,7 +91,12 @@ const Benifit = () => {
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
-          justifyContent: { lg: "space-between", md: "center" },
+          justifyContent: {
+            lg: "space-between",
+            md: "center",
+            xs: "center",
+            sm: "center",
+          },
           width: "100%",
           gap: { xs: 4, sm: 5.5, md: 1.75 },
         }}

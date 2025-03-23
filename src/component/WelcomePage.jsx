@@ -13,8 +13,9 @@ const WelcomePage = () => {
       sx={{
         width: "100%",
         textAlign: { xs: "center", md: "left" },
-        px: { xs: 2, sm: 4, md: 6 },
-        mt: { xs: 2, sm: 3, md: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
+        mt: { xs: 0, sm: 0, md: 2 },
+        mb: { xs: 3, sm: 4, md: 6 },
       }}
     >
       {/* Left Content Section */}
@@ -24,42 +25,58 @@ const WelcomePage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: { xs: "center", md: "flex-start" },
-            gap: "20px",
-            mt: { xs: 2, sm: 4, md: 0 },
-            mb: { xs: 2, sm: 4, md: 12 },
+            gap: "16px",
+            mt: { xs: 2, sm: 3, md: 4 },
+            // mb: { xs: 3, sm: 4, md: 6 },
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "16px", sm: "18px" },
+              fontSize: { xs: "12px", sm: "14px", md: "16px", lg: "18px" },
               fontWeight: 500,
               lineHeight: "24px",
               color: "#002652",
             }}
           >
-            -The Most Reliable Taxi Booking App
+            - The Most Reliable Taxi Booking App
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "32px", sm: "40px", md: "40px", lg: "49px" },
+              fontSize: { xs: "28px", sm: "34px", md: "38px", lg: "46px" },
               fontWeight: 700,
-              lineHeight: { xs: "40px", sm: "50px", md: "54px" },
+              lineHeight: { xs: "36px", sm: "44px", md: "50px", lg: "56px" },
+              textAlign: { xs: "center", md: "left" },
+              maxWidth: "660px",
             }}
           >
             <span style={{ color: "#FF8C00" }}>Welcome to Vega</span> <br />
-            Where Drivers Keep 100% <br /> of the Fare
+            Where Drivers Keep 100% of the Fare
           </Typography>
-          <Typography sx={{ fontSize: { xs: "14px", sm: "16px" } }}>
-            A subscription-based model making rides cheaper <br /> for
-            passengers and empowering drivers to earn more.
+          <Typography
+            sx={{
+              fontSize: { xs: "14px", sm: "16px", md: "18px" },
+              textAlign: { xs: "center", md: "left" },
+              lineHeight: { xs: "18px", sm: "20px", md: "24px" },
+              maxWidth: "445px",
+            }}
+          >
+            A subscription-based model making rides cheaper for passengers and
+            empowering drivers to earn more.
           </Typography>
-          <Box sx={{ cursor: "pointer" }}>
-            <img
-              src={DownloadButton}
-              alt="download-btn"
-              style={{ width: "100%", maxWidth: "250px" }}
-            />
-          </Box>
+
+          <Box
+            component="img"
+            src={DownloadButton}
+            alt="download-btn"
+            sx={{
+              width: {
+                xs: "150px",
+                sm: "180px",
+                md: "230px",
+              },
+              cursor: "pointer",
+            }}
+          />
         </Box>
       </Grid>
 
@@ -68,16 +85,26 @@ const WelcomePage = () => {
         item
         xs={12}
         md={6}
-        sx={{ display: "flex", justifyContent: "center", mt: { xs: 0, sm: 0 } }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "780px", md: "800px", lg: "800px" },
+            width: { xs: "100%", sm: "90%", md: "100%", lg: "100%" },
             height: "auto",
-            mb: 14,
+            // mb: { xs: 6, sm: 0, md: 0 },
+            display: "felx",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <img src={CarIcon} style={{ width: "100%", height: "auto" }} />
+          <img
+            src={CarIcon}
+            style={{ width: "100%", height: "auto" }}
+            alt="car-icon"
+          />
         </Box>
       </Grid>
     </Grid>

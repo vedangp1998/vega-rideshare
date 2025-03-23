@@ -21,7 +21,15 @@ const BookingProcess = () => {
         marginY: "60px",
       }}
     >
-      <Box textAlign="center">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 1,
+        }}
+      >
         <Typography
           sx={{
             fontSize: { xs: "30px", sm: "35px", md: "40px" },
@@ -35,11 +43,12 @@ const BookingProcess = () => {
           sx={{
             color: "#ffffff",
             fontSize: { xs: "16px", sm: "18px", md: "20px" },
+            maxWidth: "550px",
+            width: "auto",
           }}
         >
-          Vega is a ride-hailing company with a mission to empower
-          <br /> drivers while providing passengers with affordable and <br />{" "}
-          reliable rides.
+          Vega is a ride-hailing company with a mission to empower drivers while
+          providing passengers with affordable and reliable rides.
         </Typography>
       </Box>
 

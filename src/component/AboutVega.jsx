@@ -33,10 +33,10 @@ const AboutVega = () => {
         alt="Vega App"
         sx={{
           position: "absolute",
-          top: { xs: "87%", sm: "65%", md: "42%", lg: "30%" },
-          left: { xs: "62%", sm: "80%", md: 0 },
+          top: { xs: "86%", sm: "74%", md: "42%", lg: "30%" },
+          left: { xs: "58%", sm: "75%", md: 0 },
           transform: "translateY(-50%)",
-          width: { xs: "150px", sm: "180px", md: "480px", lg: "530px" },
+          width: { xs: "153px", sm: "180px", md: "480px", lg: "530px" },
           height: "auto",
           objectFit: "contain",
         }}
@@ -49,7 +49,7 @@ const AboutVega = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          textAlign: "left",
+          textAlign: { lg: "left", md: "left", xs: "left" },
           gap: "20px",
           pr: { xs: 2, md: 6 },
         }}
@@ -58,23 +58,24 @@ const AboutVega = () => {
           sx={{
             fontSize: { xs: "30px", md: "34px", lg: "40px" },
             fontWeight: 700,
-            lineHeight: "44px",
+            lineHeight: { md: "40px", lg: "44px" },
+            textAlign: { lg: "left", md: "left", xs: "center", sm: "left" },
+            width: "100%",
           }}
         >
           About Our Vega App
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "16px", md: "18px", lg: "20px" },
+            fontSize: { xs: "16px", md: "16px", lg: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
+            width: "100%",
+            textAlign: { lg: "left", md: "left", xs: "center", sm: "left" },
           }}
         >
-          Vega is a ride-hailing company with a mission to empower
-          <br />
-          drivers while providing passengers with affordable and
-          <br />
-          reliable rides.
+          Vega is a ride-hailing company with a mission to empower drivers while
+          providing passengers with affordable and reliable rides.
         </Typography>
 
         {/* Features List */}
@@ -92,21 +93,31 @@ const AboutVega = () => {
                   borderRadius: "50%",
                   background: "#FF8C00",
                   color: "white",
-                  width: "32px",
-                  height: "32px",
+                  width: { lg: "32px", xs: "25px" },
+                  height: { lg: "32px", xs: "25px" }, // Ensure proportional size
                   p: 1,
                   mr: 1,
                 }}
               >
-                <CheckIcon sx={{ fontSize: "18px" }} />
+                <CheckIcon
+                  sx={{
+                    fontSize: {
+                      xs: "14px",
+                      sm: "16px",
+                      md: "18px",
+                      lg: "18px",
+                    }, // Adjust for mobile
+                  }}
+                />
               </Box>
 
               <Typography
                 sx={{
                   color: "rgba(17, 17, 17, 0.6)",
-                  fontSize: "20px",
+                  fontSize: { md: "16px", sm: "16px", lg: "20px" },
                   fontWeight: 500,
                   lineHeight: "24px",
+                  width: "auto",
                 }}
               >
                 {text}
