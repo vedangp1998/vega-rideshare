@@ -56,7 +56,7 @@ const Footer = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "28px", sm: "32px", md: "40px" },
+              fontSize: { xs: "25px", sm: "32px", md: "40px" },
               color: "#FFFFFF",
               fontWeight: 700,
               lineHeight: "44px",
@@ -66,14 +66,15 @@ const Footer = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "12px", sm: "16px", md: "20px" },
+              fontSize: { xs: "12px", sm: "18px", md: "20px" },
               color: "#FFFFFF",
               fontWeight: 500,
+              maxWidth: "690px",
+              width: "auto",
             }}
           >
             Vega is a ride-hailing company with a mission to empower drivers
-            while <br />
-            providing passengers with affordable and reliable rides.
+            while providing passengers with affordable and reliable rides.
           </Typography>
         </Box>
         <Box sx={{ cursor: "pointer" }}>
@@ -81,7 +82,9 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box sx={{ bgcolor: "#151515", color: "#fff", py: 4, textAlign: "left" }}>
+      <Box
+        sx={{ bgcolor: "#ffffff", color: "#111111", py: 4, textAlign: "left" }}
+      >
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             {/* Left Column - Logo and Description */}
@@ -101,34 +104,31 @@ const Footer = () => {
                   <img src={Logo} />
                 </Box>
 
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#aaa", mb: 2, maxWidth: 300 }}
-                >
+                <Typography variant="body2" sx={{ mb: 2, maxWidth: 300 }}>
                   Vega is a ride-hailing company with a mission to empower
-                  drivers while providing passengers with affordable and
+                  drivers while providing passengers with affordable 111
                   reliable rides.
                 </Typography>
                 <Box sx={{ mb: 2 }}>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#111111", p: 0.5, mr: 1 }}
                   >
                     <InstagramIcon fontSize="small" />
                   </IconButton>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#111111", p: 0.5, mr: 1 }}
                   >
                     <WhatsAppIcon fontSize="small" />
                   </IconButton>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#111111", p: 0.5, mr: 1 }}
                   >
                     <LinkedInIcon fontSize="small" />
                   </IconButton>
-                  <IconButton size="small" sx={{ color: "#fff", p: 0.5 }}>
+                  <IconButton size="small" sx={{ color: "#111111", p: 0.5 }}>
                     <TwitterIcon fontSize="small" />
                   </IconButton>
                 </Box>
@@ -171,7 +171,7 @@ const Footer = () => {
                   href="#"
                   underline="none"
                   color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
+                  sx={{ color: "#111", fontSize: "0.875rem" }}
                 >
                   Features
                 </Link>
@@ -179,7 +179,7 @@ const Footer = () => {
                   href="#"
                   underline="none"
                   color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
+                  sx={{ color: "#111", fontSize: "0.875rem" }}
                 >
                   How it Works
                 </Link>
@@ -187,7 +187,7 @@ const Footer = () => {
                   href="#"
                   underline="none"
                   color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
+                  sx={{ color: "#111", fontSize: "0.875rem" }}
                 >
                   About Us
                 </Link>
@@ -195,7 +195,7 @@ const Footer = () => {
                   href="#"
                   underline="none"
                   color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
+                  sx={{ color: "#111", fontSize: "0.875rem" }}
                 >
                   For Driver
                 </Link>
@@ -203,7 +203,7 @@ const Footer = () => {
                   href="#"
                   underline="none"
                   color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
+                  sx={{ color: "#111", fontSize: "0.875rem" }}
                 >
                   For Driver
                 </Link>
@@ -224,13 +224,13 @@ const Footer = () => {
                 Contact
               </Typography>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#111" }}>
                   +1 (201) 256 59856
                 </Typography>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#111" }}>
                   example@gmail.com
                 </Typography>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#111" }}>
                   56, A highstreet, USA 56412
                 </Typography>
               </Box>
@@ -257,8 +257,8 @@ const Footer = () => {
                   fullWidth
                   InputProps={{
                     sx: {
-                      bgcolor: "#333",
-                      color: "#aaa",
+                      bgcolor: "#F2EAEA",
+                      color: "#111",
                       borderRadius: "8px 23px 23px 8px",
                       "& .MuiOutlinedInput-notchedOutline": {
                         border: "none",
@@ -297,16 +297,19 @@ const Footer = () => {
               borderTop: "1px solid #2F2F2F",
             }}
           >
-            <Typography variant="caption" sx={{ color: "#aaa" }}>
-              © 2025 <span style={{ color: "#fff" }}>VegaRide Share</span>. All
-              rights reserved.
+            <Typography variant="caption" sx={{ color: "#111" }}>
+              © 2025{" "}
+              <span style={{ color: "#111", fontWeight: "bold" }}>
+                VegaRide Share
+              </span>
+              . All rights reserved.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: { xs: 1, sm: 0 } }}>
               <Link
                 href="#"
                 underline="none"
                 color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
+                sx={{ color: "#111", fontSize: "0.75rem" }}
               >
                 Privacy Policy
               </Link>
@@ -314,7 +317,7 @@ const Footer = () => {
                 href="#"
                 underline="none"
                 color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
+                sx={{ color: "#111", fontSize: "0.75rem" }}
               >
                 Terms of Service
               </Link>
@@ -322,7 +325,7 @@ const Footer = () => {
                 href="#"
                 underline="none"
                 color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
+                sx={{ color: "#111", fontSize: "0.75rem" }}
               >
                 Cookie Policy
               </Link>
