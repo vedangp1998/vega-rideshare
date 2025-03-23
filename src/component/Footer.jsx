@@ -77,7 +77,16 @@ const Footer = () => {
             while providing passengers with affordable and reliable rides.
           </Typography>
         </Box>
-        <Box sx={{ cursor: "pointer" }}>
+        <Box
+          sx={{
+            cursor: "pointer",
+            width: {
+              xs: "150px",
+              sm: "180px",
+              md: "230px",
+            },
+          }}
+        >
           <img src={DownloadButton} alt="download-btn" />
         </Box>
       </Box>

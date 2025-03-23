@@ -23,7 +23,7 @@ const AboutVega = () => {
         alignItems: "center",
         // minHeight: "529px",
         height: "auto",
-        p: 8,
+        p: { lg: 8, md: 6, sm: 6, xs: 3 },
       }}
     >
       {/* Left Side Image */}
@@ -33,8 +33,8 @@ const AboutVega = () => {
         alt="Vega App"
         sx={{
           position: "absolute",
-          top: { xs: "86%", sm: "74%", md: "42%", lg: "30%" },
-          left: { xs: "58%", sm: "75%", md: 0 },
+          top: { xs: "88%", sm: "73%", md: "32%", lg: "33%" },
+          left: { xs: "55%", sm: "75%", md: 0 },
           transform: "translateY(-50%)",
           width: { xs: "153px", sm: "180px", md: "480px", lg: "530px" },
           height: "auto",
@@ -56,9 +56,9 @@ const AboutVega = () => {
       >
         <Typography
           sx={{
-            fontSize: { xs: "30px", md: "34px", lg: "40px" },
+            fontSize: { xs: "24px", md: "34px", lg: "40px" },
             fontWeight: 700,
-            lineHeight: { md: "40px", lg: "44px" },
+            lineHeight: { xs: "32px", md: "40px", lg: "44px" },
             textAlign: { lg: "left", md: "left", xs: "center", sm: "left" },
             width: "100%",
           }}
@@ -67,7 +67,7 @@ const AboutVega = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "16px", md: "16px", lg: "20px" },
+            fontSize: { xs: "15px", md: "16px", lg: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
             width: "100%",
@@ -83,7 +83,7 @@ const AboutVega = () => {
           {features.map((text, index) => (
             <Box
               key={index}
-              sx={{ display: "flex", alignItems: "center", mb: 1 }}
+              sx={{ display: "flex", alignItems: "center", mb: 2 }}
             >
               <Box
                 sx={{
@@ -117,6 +117,7 @@ const AboutVega = () => {
                   fontSize: { md: "16px", sm: "16px", lg: "20px" },
                   fontWeight: 500,
                   lineHeight: "24px",
+                  maxWidth: "530px",
                   width: "auto",
                 }}
               >
