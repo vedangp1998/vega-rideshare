@@ -65,16 +65,16 @@ const Benifit = () => {
       >
         <Typography
           sx={{
-            fontSize: { xs: "30px", sm: "35px", md: "40px" },
+            fontSize: { xs: "24px", sm: "35px", md: "40px" },
             fontWeight: 700,
-            lineHeight: "44px",
+            // lineHeight: "44px",
           }}
         >
           Benefits of <span style={{ color: "#FF8C00" }}>Vega App</span>
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "16px", sm: "18px", md: "20px" },
+            fontSize: { xs: "14px", sm: "18px", md: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
             maxWidth: "550px",

@@ -67,7 +67,7 @@ const AboutVega = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "15px", md: "16px", lg: "20px" },
+            fontSize: { xs: "14px", md: "16px", lg: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
             width: "100%",

@@ -68,7 +68,7 @@ const Header = () => {
       </Box>
 
       <IconButton
-        sx={{ display: { xs: "block", md: "none" } }}
+        sx={{ display: { xs: "block", md: "none" }, marginBottom: "6px" }}
         onClick={toggleDrawer(true)}
       >
         <MenuIcon />
@@ -80,7 +80,7 @@ const Header = () => {
             width: 250,
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "start",
             padding: "20px",
           }}
           role="presentation"
@@ -94,7 +94,7 @@ const Header = () => {
               </ListItem>
             ))}
           </List>
-          <Button>Contact</Button>
+          <Button width={106}>Contact</Button>
         </Box>
       </Drawer>
     </Box>

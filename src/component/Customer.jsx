@@ -39,7 +39,9 @@ function TestimonialCard({ compact = false }) {
 
         <Typography
           sx={{
-            fontSize: compact ? "16px" : "24px",
+            fontSize: compact
+              ? { xs: "12px", md: "16px" }
+              : { lg: "24px", xs: "16px", md: "24px", sm: "20px" },
             fontWeight: compact ? "700" : "700",
             color: "#002652",
             mb: 2,
@@ -83,7 +85,7 @@ const Customer = () => {
       <Box
         sx={{
           backgroundColor: "#f5f2e8",
-          borderRadius: "16px",
+          borderRadius: "34px",
           padding: { xs: "24px", md: "40px" },
           maxWidth: "100%",
           margin: "0 auto",
@@ -99,7 +101,7 @@ const Customer = () => {
         >
           <Typography
             sx={{
-              fontSize: { xs: "18px", md: "40px" },
+              fontSize: { xs: "23px", md: "40px" },
               fontWeight: 700,
             }}
           >
@@ -107,12 +109,13 @@ const Customer = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "16px", md: "20px" },
+              fontSize: { xs: "12px", md: "20px" },
+              maxWidth: "499px",
+              width: "auto",
             }}
           >
-            Vega is a ride-hailing company with a mission to empower <br />{" "}
-            drivers while providing passengers with affordable and <br />{" "}
-            reliable rides.
+            Vega is a ride-hailing company with a mission to empower drivers
+            while providing passengers with affordable and reliable rides.
           </Typography>
         </Box>
 

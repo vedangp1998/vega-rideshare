@@ -32,7 +32,7 @@ const BookingProcess = () => {
       >
         <Typography
           sx={{
-            fontSize: { xs: "30px", sm: "35px", md: "40px" },
+            fontSize: { xs: "24px", sm: "35px", md: "40px" },
             fontWeight: 700,
             color: "#FFFFFF",
           }}
@@ -42,7 +42,7 @@ const BookingProcess = () => {
         <Typography
           sx={{
             color: "#ffffff",
-            fontSize: { xs: "16px", sm: "18px", md: "20px" },
+            fontSize: { xs: "14px", sm: "18px", md: "20px" },
             maxWidth: "550px",
             width: "auto",
           }}
@@ -71,68 +71,96 @@ const BookingProcess = () => {
             key={index}
             sx={{
               background: "#FFFFFF",
-              width: { xs: "90%", sm: "75%", md: "369px" },
+              width: { xs: "90%", sm: "60%", md: "369px" },
+              maxWidth: "369px",
               height: "483px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-between",
               borderRadius: "16px",
+              // padding: { xs: "16px", sm: "20px", md: "6px 6px 0px 6px" },
             }}
           >
             {index !== 1 && (
-              <Box sx={{ marginTop: "24px", textAlign: "center" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "24px" }}>
+              <Box sx={{ textAlign: "center", padding: "20px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { md: "24px", xs: "18px" },
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    verticalAlign: "middle",
+                    marginBottom: "8px",
+                  }}
+                >
                   {card.title}
                 </Typography>
                 <Typography
                   sx={{
                     fontWeight: 500,
-                    fontSize: {
-                      xs: "12px",
-                      sm: "14px",
-                      md: "14px",
-                      lg: "14px",
-                    },
-                    color: "rgba(17, 17, 17, 0.6)",
+                    fontSize: { md: "16px", xs: "14px", sm: "14px" },
+                    lineHeight: "20px",
+                    letterSpacing: "0%",
                     textAlign: "center",
+                    verticalAlign: "middle",
+                    color: "rgba(17, 17, 17, 0.6)",
+                    maxWidth: "329px",
+                    width: "100%",
                   }}
                 >
-                  Vega is a ride-hailing company with a mission to <br />
-                  empower drivers while providing passengers with <br />
-                  affordable rides.
+                  Vega is a ride-hailing company with a mission to empower
+                  drivers while providing passengers with affordable rides.
                 </Typography>
               </Box>
             )}
 
-            <Box>
-              <img
-                src={card.img}
-                style={{ width: "100%", maxWidth: "200px" }}
-              />
-            </Box>
+            <Box
+              component="img"
+              src={card.img}
+              sx={{
+                width: { lg: "233px", md: "233px", xs: "180px", sm: "233px" },
+                height: { lg: "314px", xs: "auto", sm: "272px", md: "290px" },
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
 
             {index === 1 && (
-              <Box sx={{ marginBottom: "24px", textAlign: "center" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "24px" }}>
+              <Box
+                sx={{
+                  textAlign: "center",
+                  padding: "20px",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { md: "24px", xs: "18px" },
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    verticalAlign: "middle",
+                    marginBottom: "8px",
+                  }}
+                >
                   {card.title}
                 </Typography>
                 <Typography
                   sx={{
                     fontWeight: 500,
-                    fontSize: {
-                      xs: "12px",
-                      sm: "14px",
-                      md: "14px",
-                      lg: "14px",
-                    },
-                    color: "rgba(17, 17, 17, 0.6)",
+                    fontSize: { md: "16px", xs: "14px", sm: "14px" },
+                    lineHeight: "20px",
+                    letterSpacing: "0%",
                     textAlign: "center",
+                    verticalAlign: "middle",
+                    color: "rgba(17, 17, 17, 0.6)",
+                    maxWidth: "329px",
+                    width: "100%",
                   }}
                 >
-                  Vega is a ride-hailing company with a mission to <br />
-                  empower drivers while providing passengers with <br />
-                  affordable rides.
+                  Vega is a ride-hailing company with a mission to empower
+                  drivers while providing passengers with affordable rides.
                 </Typography>
               </Box>
             )}

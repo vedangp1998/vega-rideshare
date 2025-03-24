@@ -91,7 +91,7 @@ const Pricing = () => {
         <Typography
           sx={{
             fontSize: {
-              xs: "20px",
+              xs: "12px",
               sm: "20px",
               md: "20px",
               color: "rgba(17, 17, 17, 0.6)",
@@ -102,7 +102,7 @@ const Pricing = () => {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "30px", sm: "36px", md: "40px" },
+            fontSize: { xs: "24px", sm: "36px", md: "40px" },
             fontWeight: 700,
             lineHeight: { xs: "36px", sm: "42px", md: "44px" },
           }}
@@ -113,7 +113,7 @@ const Pricing = () => {
         </Typography>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           alignItems: "center",
@@ -129,7 +129,7 @@ const Pricing = () => {
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
           Bill Annually
         </Typography>
-      </Box>
+      </Box> */}
 
       <Box
         sx={{
@@ -178,18 +178,19 @@ const Pricing = () => {
                 </span>
               </Typography>
               <Typography sx={{ fontSize: "20px", fontWeight: 500 }}>
-                {price === 99 ? "Premium" : "Basic"}
+                {price === 99 ? "Premium" : price === 49 ? "Standard" : "Basic"}
               </Typography>
               <Typography
                 sx={{
                   fontSize: "14px",
                   fontWeight: 500,
                   color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.6)",
+                  maxWidth: "292px",
+                  width: "auto",
                 }}
               >
-                Vega is a ride-hailing company with a mission to <br />
-                empower drivers while providing passengers with <br />
-                affordable rides.
+                Vega is a ride-hailing company with a mission to empower drivers
+                while providing passengers with affordable rides.
               </Typography>
             </Box>
 
