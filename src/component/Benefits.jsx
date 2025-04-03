@@ -8,34 +8,34 @@ import SosIcon from "../assets/sos.svg";
 const cardData = [
   {
     title: "Fare Estimate",
-    description: `Vega is a ride-hailing company with a<br />
-      mission to empower drivers while<br />
-      providing passengers with<br />
-      affordable rides.`,
+    description: `Get a clear, upfront fare estimate <br />
+      before, you book—no surprises, just<br />
+      transparent pricing every time<br />
+      you ride.`,
     icon: DollorIcon,
   },
   {
     title: "Secure Payment",
-    description: `Vega is a ride-hailing company with a<br />
-      mission to empower drivers while<br />
-      providing passengers with<br />
-      affordable rides.`,
+    description: `Enjoy safe and hassle-free <br /> 
+     transactions with multiple payment </br> 
+     options and encrypted <br />
+     security.`,
     icon: WalletIcon,
   },
   {
     title: "Exclusive Offers",
-    description: `Vega is a ride-hailing company with a<br />
-      mission to empower drivers while<br />
-      providing passengers with<br />
-      affordable rides.`,
+    description: `Unlock special discounts and<br />
+      offers for loyal riders and drivers, <br />
+      making every ride more<br />
+      rewarding.`,
     icon: OfferIcon,
   },
   {
     title: "SOS Button",
-    description: `Vega is a ride-hailing company with a<br />
-      mission to empower drivers while<br />
-      providing passengers with<br />
-      affordable rides.`,
+    description: `Safety first! Our in-app SOS <br />
+      button ensures instant access to <br />
+      emergency support when <br />
+      needed.`,
     icon: SosIcon,
   },
 ];
@@ -62,18 +62,18 @@ const Benifit = () => {
             lineHeight: "44px",
           }}
         >
-          Benefits of <span style={{ color: "#FF8C00" }}>Vega App</span>
+          Benefits of <span style={{ color: "#FF8C00" }}>Vega Ride </span>
         </Typography>
         <Typography
           sx={{
             fontSize: { xs: "16px", sm: "18px", md: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
+            marginTop: 1,
           }}
         >
-          Vega is a ride-hailing company with a mission to empower<br></br>{" "}
-          drivers while providing passengers with affordable and <br></br>{" "}
-          reliable rides.
+          Vega Ride is designed to offer a seamless, affordable, and <br />
+          secure ride-hailing experience for both riders and drivers.
         </Typography>
       </Box>
       <Box
@@ -81,7 +81,7 @@ const Benifit = () => {
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
-          justifyContent: { lg: "space-between", md: "center" },
+          justifyContent: { lg: "space-between", md: "center", xs: "center" },
           width: "100%",
           gap: { xs: 4, sm: 5.5, md: 1.75 },
         }}

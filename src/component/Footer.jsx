@@ -105,9 +105,9 @@ const Footer = () => {
                   variant="body2"
                   sx={{ color: "#aaa", mb: 2, maxWidth: 300 }}
                 >
-                  Vega is a ride-hailing company with a mission to empower
-                  drivers while providing passengers with affordable and
-                  reliable rides.
+                  Vega Ride is built to empower both drivers and passengers. We
+                  believe in making transportation effortless, cost-effective,
+                  and rewarding for everyone.
                 </Typography>
                 <Box sx={{ mb: 2 }}>
                   <IconButton
@@ -197,7 +197,7 @@ const Footer = () => {
                   color="inherit"
                   sx={{ color: "#aaa", fontSize: "0.875rem" }}
                 >
-                  For Driver
+                  For Riders
                 </Link>
                 <Link
                   href="#"
@@ -205,7 +205,7 @@ const Footer = () => {
                   color="inherit"
                   sx={{ color: "#aaa", fontSize: "0.875rem" }}
                 >
-                  For Driver
+                  For Drivers
                 </Link>
               </Box>
             </Grid>

@@ -29,7 +29,7 @@ const BookingProcess = () => {
             color: "#FFFFFF",
           }}
         >
-          Benefits of <span style={{ color: "#FF8C00" }}>Vega App</span>
+          Benefits of <span style={{ color: "#FF8C00" }}>Vega Ride</span>
         </Typography>
         <Typography
           sx={{
@@ -37,9 +37,9 @@ const BookingProcess = () => {
             fontSize: { xs: "16px", sm: "18px", md: "20px" },
           }}
         >
-          Vega is a ride-hailing company with a mission to empower
-          <br /> drivers while providing passengers with affordable and <br />{" "}
-          reliable rides.
+          Vega Ride Share is designed to provide a fast, reliable, and seamless
+          <br /> ride experience. Our features make booking, tracking, and{" "}
+          <br /> communicating easier than ever.
         </Typography>
       </Box>
 
@@ -89,9 +89,9 @@ const BookingProcess = () => {
                     textAlign: "center",
                   }}
                 >
-                  Vega is a ride-hailing company with a mission to <br />
-                  empower drivers while providing passengers with <br />
-                  affordable rides.
+                  Book your ride in just a few taps with our intuitive <br />
+                  and user-friendly app. Get where you need <br />
+                  to go quickly and hassle-free.
                 </Typography>
               </Box>
             )}
@@ -121,9 +121,9 @@ const BookingProcess = () => {
                     textAlign: "center",
                   }}
                 >
-                  Vega is a ride-hailing company with a mission to <br />
-                  empower drivers while providing passengers with <br />
-                  affordable rides.
+                  Track your ride in real time with accurate GPS <br />
+                  navigation. Stay updated on your driver’s location <br />
+                  and estimated arrival time.
                 </Typography>
               </Box>
             )}

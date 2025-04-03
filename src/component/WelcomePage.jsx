@@ -46,12 +46,13 @@ const WelcomePage = () => {
               lineHeight: { xs: "40px", sm: "50px", md: "54px" },
             }}
           >
-            <span style={{ color: "#FF8C00" }}>Welcome to Vega</span> <br />
-            Where Drivers Keep 100% <br /> of the Fare
+            <span style={{ color: "#FF8C00" }}>Vega Ride Share</span> <br />
+            The Smarter Way to Ride!
           </Typography>
+
           <Typography sx={{ fontSize: { xs: "14px", sm: "16px" } }}>
-            A subscription-based model making rides cheaper <br /> for
-            passengers and empowering drivers to earn more.
+            🚖 Affordable rides for passengers <br /> 💰 Higher earnings for
+            drivers <br /> 📱 Fast & reliable booking
           </Typography>
           <Box sx={{ cursor: "pointer" }}>
             <img

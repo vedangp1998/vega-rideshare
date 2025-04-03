@@ -5,9 +5,9 @@ import MobileImage from "../assets/Mobileonhand.svg";
 import CheckIcon from "@mui/icons-material/Check";
 
 const features = [
-  "Vega is a ride-hailing company with a mission to empower",
-  "Vega is a ride-hailing company with a mission to empower",
-  "Vega is a ride-hailing company with a mission to empower",
+  "Affordable Rides – Transparent pricing with no hidden fees.",
+  "Driver Empowerment – Keep 100% of your earnings, no commissions.",
+  "Seamless Experience – Fast, reliable, and hassle-free booking.",
 ];
 
 const AboutVega = () => {
@@ -23,7 +23,7 @@ const AboutVega = () => {
         alignItems: "center",
         // minHeight: "529px",
         height: "auto",
-        p: 8,
+        p: { xs: 6, md: 8, lg: 8 },
       }}
     >
       {/* Left Side Image */}
@@ -59,22 +59,23 @@ const AboutVega = () => {
             fontSize: { xs: "30px", md: "34px", lg: "40px" },
             fontWeight: 700,
             lineHeight: "44px",
+            letterSpacing: "none",
+            textAlign: { xs: "center", sm: "center", md: "left" },
           }}
         >
-          About Our Vega App
+          About Vega Ride Share
         </Typography>
         <Typography
           sx={{
             fontSize: { xs: "16px", md: "18px", lg: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
+            textAlign: { xs: "center", sm: "center", md: "left" },
+            letterSpacing: "none",
           }}
         >
-          Vega is a ride-hailing company with a mission to empower
-          <br />
-          drivers while providing passengers with affordable and
-          <br />
-          reliable rides.
+          Vega Ride Share is redefining ride-hailing with a driver-first
+          approach and affordable rides for all.
         </Typography>
 
         {/* Features List */}
@@ -104,9 +105,10 @@ const AboutVega = () => {
               <Typography
                 sx={{
                   color: "rgba(17, 17, 17, 0.6)",
-                  fontSize: "20px",
+                  fontSize: "16px",
                   fontWeight: 500,
-                  lineHeight: "24px",
+                  lineHeight: "26px",
+                  width: "100%",
                 }}
               >
                 {text}

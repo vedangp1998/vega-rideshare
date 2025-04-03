@@ -4,10 +4,46 @@ import { styled } from "@mui/material/styles";
 import CheckIcon from "@mui/icons-material/Check";
 import Button from "./ui/Button";
 
-const features = [
-  "Vega is a ride-hailing company ",
-  "Vega is a ride-hailing company ",
-  "Vega is a ride-hailing company ",
+// const features = [
+//   "Vega is a ride-hailing company ",
+//   "Vega is a ride-hailing company ",
+//   "Vega is a ride-hailing company ",
+// ];
+
+const plans = [
+  {
+    price: 29,
+    title: "Starter Plan",
+    description:
+      "Start your journey with Vega! This plan is ideal for part-time drivers who want flexible earnings with essential features.",
+    features: [
+      "Access to ride requests",
+      "Standard support",
+      "Basic earning analytics",
+    ],
+  },
+  {
+    price: 49,
+    title: " Pro Plan (Most Popular)",
+    description:
+      "Drive smarter and earn more! This plan is perfect for full-time drivers who need priority access and lower fees.",
+    features: [
+      "Everything in Starter Plan",
+      "Priority ride matching",
+      "Advanced earning insights",
+    ],
+  },
+  {
+    price: 99,
+    title: "Premium Plan",
+    description:
+      "Maximize your earnings with the ultimate driver experience. Get exclusive perks and VIP support for stress-free driving.",
+    features: [
+      "Advanced earning insights",
+      "VIP customer support",
+      "Lower service fees & premium features",
+    ],
+  },
 ];
 
 const IOSSwitch = styled((props) => (
@@ -131,7 +167,7 @@ const Pricing = () => {
         </Typography>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           width: "100%",
           display: "flex",
@@ -244,6 +280,125 @@ const Pricing = () => {
                     width: "106px",
                     background: index === 1 ? "#FFFFFF" : "#002652",
                     color: index === 1 ? "#003366" : "#FFFFFF",
+                  }}
+                >
+                  Choose
+                </Button>
+              </Box>
+            </Box>
+          </Box>
+        ))}
+      </Box> */}
+
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: { xs: 2, sm: 3, md: 4 },
+        }}
+      >
+        {plans.map((plan, index) => (
+          <Box
+            key={index}
+            sx={{
+              borderRadius: "16px",
+              textAlign: "left",
+              height: "auto",
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+              padding: 4,
+              width: { xs: "100%", sm: "80%", md: "30%" },
+              border: index === 1 ? "none" : "1px solid rgba(206, 206, 206, 1)",
+              background: index === 1 ? "#FF8C00" : "#FFFFFF",
+              color: index === 1 ? "#FFFFFF" : "#000",
+            }}
+          >
+            <Box sx={{ textAlign: "left", gap: 2 }}>
+              <Typography
+                sx={{
+                  fontSize: { xs: "32px", sm: "36px", md: "40px" },
+                  fontWeight: 600,
+                  lineHeight: { xs: "38px", sm: "42px", md: "44px" },
+                }}
+              >
+                ${plan.price}{" "}
+                <span
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: 600,
+                    color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.5)",
+                  }}
+                >
+                  /month
+                </span>
+              </Typography>
+              <Typography sx={{ fontSize: "20px", fontWeight: 500 }}>
+                {plan.title}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.6)",
+                }}
+              >
+                {plan.description}
+              </Typography>
+            </Box>
+
+            <Divider sx={{ color: "#CECECE" }} />
+
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
+              {plan.features.map((feature, i) => (
+                <Box
+                  key={i}
+                  sx={{ display: "flex", alignItems: "center", mb: 1 }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: "50%",
+                      background: index === 1 ? "#FFFFFF" : "#FF8C00",
+                      color: index === 1 ? "#FF8C00" : "#FFFFFF",
+                      width: "20px",
+                      height: "21px",
+                      p: 1,
+                      mr: 1.5,
+                    }}
+                  >
+                    <CheckIcon
+                      sx={{
+                        fontSize: "14px",
+                        color: index === 1 ? "#FF8C00" : "#FFFFFF",
+                      }}
+                    />
+                  </Box>
+
+                  <Typography
+                    sx={{
+                      fontSize: "16px",
+                      fontWeight: 500,
+                      color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.6)",
+                    }}
+                  >
+                    {feature}
+                  </Typography>
+                </Box>
+              ))}
+              <Box>
+                <Button
+                  variant="contained"
+                  sx={{
+                    width: "106px",
+                    background: index === 1 ? "#FFFFFF" : "#002652",
+                    color: index === 1 ? "#003366" : "#FFFFFF",
+                    marginTop: 2,
                   }}
                 >
                   Choose
