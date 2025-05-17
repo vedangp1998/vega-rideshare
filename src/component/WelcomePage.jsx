@@ -1,87 +1,140 @@
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, useMediaQuery, useTheme } from "@mui/material";
 import DownloadButton from "../assets/Download-Appstore.svg";
 import CarIcon from "../assets/CarIcon.png";
 
 const WelcomePage = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Grid
-      container
-      spacing={2}
-      alignItems="center"
-      justifyContent="center"
-      sx={{
-        width: "100%",
-        textAlign: { xs: "center", md: "left" },
-        px: { xs: 2, sm: 4, md: 6 },
-        mt: { xs: 2, sm: 3, md: 4 },
-      }}
-    >
-      {/* Left Content Section */}
-      <Grid item xs={12} md={6}>
-        <Box
+    <Box sx={{ overflow: "hidden", width: "100%" }}>
+      <Grid
+        container
+        spacing={{ xs: 1, sm: 2, md: 4 }} // Reduced spacing on mobile
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          width: "100%",
+          textAlign: { xs: "center", md: "left" },
+          px: { xs: 2, sm: 4, md: 6 },
+          pt: { xs: 1, sm: 2, md: 4 }, // Reduced top padding on mobile
+          pb: { xs: 2, sm: 4, md: 6 }, // Reduced bottom padding on mobile
+        }}
+      >
+        {/* Left Content Section */}
+        <Grid item xs={12} md={6}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", md: "flex-start" },
+              gap: { xs: "12px", sm: "20px" }, // Reduced gap on mobile
+              mt: { xs: 1, sm: 2, md: 0 }, // Reduced top margin on mobile
+              mb: { xs: 2, sm: 4, md: 0 }, // Reduced bottom margin on mobile
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                fontWeight: 500,
+                lineHeight: "24px",
+                color: "#002652",
+              }}
+            >
+              -The Most Reliable Taxi Booking App
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "28px", sm: "36px", md: "40px", lg: "49px" },
+                fontWeight: 700,
+                lineHeight: { xs: "36px", sm: "46px", md: "54px" },
+                maxWidth: "100%",
+              }}
+            >
+              <span style={{ color: "#FF8C00" }}>Vega Ride Share</span>{" "}
+              {isMobile ? "" : <br />}
+              The Smarter Way to Ride!
+            </Typography>
+
+            <Box
+              sx={{
+                fontSize: { xs: "14px", sm: "16px" },
+                maxWidth: { xs: "280px", sm: "350px", md: "400px" },
+                textAlign: { xs: "center", md: "left" },
+                my: { xs: 0.5, sm: 2 }, // Reduced vertical margin on mobile
+              }}
+            >
+              <Typography
+                component="div"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: { xs: "4px", sm: "8px" }, // Reduced gap on mobile
+                  alignItems: { xs: "center", md: "flex-start" },
+                }}
+              >
+                <Box>🚖 Affordable rides for passengers</Box>
+                <Box>💰 Higher earnings for drivers</Box>
+                <Box>📱 Fast & reliable booking</Box>
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                cursor: "pointer",
+                mt: { xs: 1, sm: 2 }, // Reduced top margin on mobile
+                width: { xs: "180px", sm: "220px", md: "250px" },
+              }}
+            >
+              <img
+                src={DownloadButton || "/placeholder.svg"}
+                alt="Download from App Store"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </Box>
+          </Box>
+        </Grid>
+
+        {/* Right Image Section */}
+        <Grid
+          item
+          xs={12}
+          md={6}
           sx={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: { xs: "center", md: "flex-start" },
-            gap: "20px",
-            mt: { xs: 2, sm: 4, md: 0 },
-            mb: { xs: 2, sm: 4, md: 12 },
+            justifyContent: "center",
+            alignItems: "center",
+            mt: { xs: -1, sm: 0 }, // Negative margin to reduce space on mobile
+            mb: { xs: -1, sm: 0 }, // Negative margin to reduce space on mobile
           }}
         >
-          <Typography
+          <Box
             sx={{
-              fontSize: { xs: "16px", sm: "18px" },
-              fontWeight: 500,
-              lineHeight: "24px",
-              color: "#002652",
+              width: "100%",
+              maxWidth: { xs: "90%", sm: "85%", md: "100%" },
+              height: "auto",
+              display: "flex",
+              justifyContent: "center",
+              py: { xs: 0, sm: 2, md: 3 }, // Reduced padding on mobile
+              mb: { xs: 0, sm: 2, md: 4 }, // Removed bottom margin on mobile
             }}
           >
-            -The Most Reliable Taxi Booking App
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: "32px", sm: "40px", md: "40px", lg: "49px" },
-              fontWeight: 700,
-              lineHeight: { xs: "40px", sm: "50px", md: "54px" },
-            }}
-          >
-            <span style={{ color: "#FF8C00" }}>Vega Ride Share</span> <br />
-            The Smarter Way to Ride!
-          </Typography>
-
-          <Typography sx={{ fontSize: { xs: "14px", sm: "16px" } }}>
-            🚖 Affordable rides for passengers <br /> 💰 Higher earnings for
-            drivers <br /> 📱 Fast & reliable booking
-          </Typography>
-          <Box sx={{ cursor: "pointer" }}>
             <img
-              src={DownloadButton}
-              alt="download-btn"
-              style={{ width: "100%", maxWidth: "250px" }}
+              src={CarIcon || "/placeholder.svg"}
+              alt="Taxi car illustration"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxWidth: "600px",
+                marginTop: isMobile ? "-10px" : "0", // Negative margin on mobile only
+                marginBottom: isMobile ? "-10px" : "0", // Negative margin on mobile only
+              }}
             />
           </Box>
-        </Box>
+        </Grid>
       </Grid>
-
-      {/* Right Image Section */}
-      <Grid
-        item
-        xs={12}
-        md={6}
-        sx={{ display: "flex", justifyContent: "center", mt: { xs: 0, sm: 0 } }}
-      >
-        <Box
-          sx={{
-            width: { xs: "100%", sm: "780px", md: "800px", lg: "800px" },
-            height: "auto",
-            mb: 14,
-          }}
-        >
-          <img src={CarIcon} style={{ width: "100%", height: "auto" }} />
-        </Box>
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 

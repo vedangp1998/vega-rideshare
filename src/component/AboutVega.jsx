@@ -60,7 +60,12 @@ const AboutVega = () => {
             fontWeight: 700,
             lineHeight: "44px",
             letterSpacing: "none",
-            textAlign: { xs: "center", sm: "center", md: "left" },
+            textAlign: {
+              xs: "center",
+              sm: "center",
+              md: "left",
+              lg: "left",
+            },
           }}
         >
           About Vega Ride Share
@@ -70,7 +75,7 @@ const AboutVega = () => {
             fontSize: { xs: "16px", md: "18px", lg: "20px" },
             fontWeight: 500,
             lineHeight: "24px",
-            textAlign: { xs: "center", sm: "center", md: "left" },
+            textAlign: { xs: "center", sm: "left", md: "left" },
             letterSpacing: "none",
           }}
         >
