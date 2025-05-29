@@ -98,17 +98,24 @@ const Footer = () => {
             >
               <Box sx={{ mb: 2 }}>
                 <Box sx={{ mb: 2 }}>
-                  <img src={Logo} />
+                  <img src={Logo} alt="Logo" />
                 </Box>
 
                 <Typography
                   variant="body2"
-                  sx={{ color: "#aaa", mb: 2, maxWidth: 300 }}
+                  sx={{
+                    color: "#aaa",
+                    mb: 2,
+                    maxWidth: 300,
+                    fontSize: { xs: "14px", sm: "15px", md: "16px" },
+                    lineHeight: { xs: "22px", sm: "24px", md: "26px" },
+                  }}
                 >
                   Vega Ride is built to empower both drivers and passengers. We
                   believe in making transportation effortless, cost-effective,
                   and rewarding for everyone.
                 </Typography>
+
                 <Box sx={{ mb: 2 }}>
                   <IconButton
                     size="small"

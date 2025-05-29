@@ -11,27 +11,26 @@ const WelcomePage = () => {
     <Box sx={{ overflow: "hidden", width: "100%" }}>
       <Grid
         container
-        spacing={{ xs: 1, sm: 2, md: 4 }} // Reduced spacing on mobile
+        spacing={{ xs: 1, sm: 2, md: 4 }}
         alignItems="center"
         justifyContent="center"
         sx={{
           width: "100%",
           textAlign: { xs: "center", md: "left" },
           px: { xs: 2, sm: 4, md: 6 },
-          pt: { xs: 1, sm: 2, md: 4 }, // Reduced top padding on mobile
-          pb: { xs: 2, sm: 4, md: 6 }, // Reduced bottom padding on mobile
+          pt: { xs: 1, sm: 2, md: 4 },
+          pb: { xs: 2, sm: 4, md: 6 },
         }}
       >
-        {/* Left Content Section */}
         <Grid item xs={12} md={6}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: { xs: "center", md: "flex-start" },
-              gap: { xs: "12px", sm: "20px" }, // Reduced gap on mobile
-              mt: { xs: 1, sm: 2, md: 0 }, // Reduced top margin on mobile
-              mb: { xs: 2, sm: 4, md: 0 }, // Reduced bottom margin on mobile
+              gap: { xs: "12px", sm: "20px" },
+              mt: { xs: 1, sm: 2, md: 0 },
+              mb: { xs: 2, sm: 4, md: 0 },
             }}
           >
             <Typography
@@ -83,7 +82,7 @@ const WelcomePage = () => {
             <Box
               sx={{
                 cursor: "pointer",
-                mt: { xs: 1, sm: 2 }, // Reduced top margin on mobile
+                mt: { xs: 1, sm: 2 },
                 width: { xs: "180px", sm: "220px", md: "250px" },
               }}
             >
@@ -96,7 +95,6 @@ const WelcomePage = () => {
           </Box>
         </Grid>
 
-        {/* Right Image Section */}
         <Grid
           item
           xs={12}
@@ -105,8 +103,8 @@ const WelcomePage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            mt: { xs: -1, sm: 0 }, // Negative margin to reduce space on mobile
-            mb: { xs: -1, sm: 0 }, // Negative margin to reduce space on mobile
+            mt: { xs: -1, sm: 0 },
+            mb: { xs: -1, sm: 0 },
           }}
         >
           <Box
@@ -116,8 +114,8 @@ const WelcomePage = () => {
               height: "auto",
               display: "flex",
               justifyContent: "center",
-              py: { xs: 0, sm: 2, md: 3 }, // Reduced padding on mobile
-              mb: { xs: 0, sm: 2, md: 4 }, // Removed bottom margin on mobile
+              py: { xs: 0, sm: 2, md: 3 },
+              mb: { xs: 0, sm: 2, md: 4 },
             }}
           >
             <img
@@ -127,8 +125,8 @@ const WelcomePage = () => {
                 width: "100%",
                 height: "auto",
                 maxWidth: "600px",
-                marginTop: isMobile ? "-10px" : "0", // Negative margin on mobile only
-                marginBottom: isMobile ? "-10px" : "0", // Negative margin on mobile only
+                marginTop: isMobile ? "-10px" : "0",
+                marginBottom: isMobile ? "-10px" : "0",
               }}
             />
           </Box>

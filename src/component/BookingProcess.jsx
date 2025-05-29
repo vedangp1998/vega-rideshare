@@ -24,7 +24,7 @@ const BookingProcess = () => {
       <Box textAlign="center">
         <Typography
           sx={{
-            fontSize: { xs: "30px", sm: "35px", md: "40px" },
+            fontSize: { xs: "24px", sm: "35px", md: "40px" },
             fontWeight: 700,
             color: "#FFFFFF",
           }}
@@ -34,12 +34,15 @@ const BookingProcess = () => {
         <Typography
           sx={{
             color: "#ffffff",
-            fontSize: { xs: "16px", sm: "18px", md: "20px" },
+            fontSize: { xs: "14px", sm: "18px", md: "20px" },
+            lineHeight: { xs: "22px", sm: "26px", md: "28px" },
           }}
         >
           Vega Ride Share is designed to provide a fast, reliable, and seamless
-          <br /> ride experience. Our features make booking, tracking, and{" "}
-          <br /> communicating easier than ever.
+          <br style={{ display: "none" }} />
+          ride experience. Our features make booking, tracking, and
+          <br style={{ display: "none" }} />
+          communicating easier than ever.
         </Typography>
       </Box>
 
@@ -73,7 +76,12 @@ const BookingProcess = () => {
           >
             {index !== 1 && (
               <Box sx={{ marginTop: "24px", textAlign: "center" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "24px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { xs: "18px", sm: "22px", md: "24px" },
+                  }}
+                >
                   {card.title}
                 </Typography>
                 <Typography
@@ -83,14 +91,16 @@ const BookingProcess = () => {
                       xs: "12px",
                       sm: "14px",
                       md: "14px",
-                      lg: "14px",
                     },
+                    lineHeight: { xs: "20px", sm: "22px", md: "22px" },
                     color: "rgba(17, 17, 17, 0.6)",
                     textAlign: "center",
                   }}
                 >
-                  Book your ride in just a few taps with our intuitive <br />
-                  and user-friendly app. Get where you need <br />
+                  Book your ride in just a few taps with our intuitive
+                  <br style={{ display: "none" }} />
+                  and user-friendly app. Get where you need
+                  <br style={{ display: "none" }} />
                   to go quickly and hassle-free.
                 </Typography>
               </Box>
@@ -100,12 +110,18 @@ const BookingProcess = () => {
               <img
                 src={card.img}
                 style={{ width: "100%", maxWidth: "200px" }}
+                alt={card.title}
               />
             </Box>
 
             {index === 1 && (
               <Box sx={{ marginBottom: "24px", textAlign: "center" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "24px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { xs: "18px", sm: "22px", md: "24px" },
+                  }}
+                >
                   {card.title}
                 </Typography>
                 <Typography
@@ -115,14 +131,16 @@ const BookingProcess = () => {
                       xs: "12px",
                       sm: "14px",
                       md: "14px",
-                      lg: "14px",
                     },
+                    lineHeight: { xs: "20px", sm: "22px", md: "22px" },
                     color: "rgba(17, 17, 17, 0.6)",
                     textAlign: "center",
                   }}
                 >
-                  Track your ride in real time with accurate GPS <br />
-                  navigation. Stay updated on your driver’s location <br />
+                  Track your ride in real time with accurate GPS
+                  <br style={{ display: "none" }} />
+                  navigation. Stay updated on your driver’s location
+                  <br style={{ display: "none" }} />
                   and estimated arrival time.
                 </Typography>
               </Box>

@@ -51,7 +51,6 @@ const Benifit = () => {
         justifyContent: "space-between",
         height: "auto",
         gap: 12,
-        marginY: "120px",
       }}
     >
       <Box textAlign="center">
