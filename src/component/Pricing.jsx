@@ -120,7 +120,6 @@ const Pricing = () => {
         height: "auto",
         gap: { xs: 3, sm: 4, md: 4 },
         marginY: { xs: "60px", sm: "80px", md: "120px" },
-        paddingX: { xs: 2, sm: 4, md: 0 },
       }}
     >
       <Box textAlign="center">
@@ -297,7 +296,7 @@ const Pricing = () => {
           flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "center",
-          gap: { xs: 2, sm: 3, md: 4 },
+          gap: { xs: 2, sm: 3, md: 8 },
         }}
       >
         {plans.map((plan, index) => (

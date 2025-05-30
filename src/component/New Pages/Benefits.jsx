@@ -23,7 +23,7 @@ import {
 
 const Benefit = () => {
   return (
-    <Box sx={{ px: { xs: 2, sm: 3, lg: 4 }, mt: 6 }}>
+    <Box sx={{  marginY: 8 }}>
       <Box sx={{ maxWidth: "1200px", mx: "auto" }}>
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 8 }}>

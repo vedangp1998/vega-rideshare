@@ -81,7 +81,7 @@ const CommentSection = () => {
               border: "1px solid #334155",
               borderRadius: "12px",
               textAlign: "left",
-              p: 2,
+              p: 1.5,
             }}
           >
             <CardHeader

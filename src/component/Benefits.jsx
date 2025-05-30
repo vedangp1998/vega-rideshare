@@ -50,7 +50,7 @@ const Benifit = () => {
         alignItems: "center",
         justifyContent: "space-between",
         height: "auto",
-        gap: 12,
+        gap: 8,
       }}
     >
       <Box textAlign="center">
@@ -69,10 +69,12 @@ const Benifit = () => {
             fontWeight: 500,
             lineHeight: "24px",
             marginTop: 1,
+            width: "100%",
+            maxWidth: "900px",
           }}
         >
-          Vega Ride is designed to offer a seamless, affordable, and <br />
-          secure ride-hailing experience for both riders and drivers.
+          Vega Ride is designed to offer a seamless, affordable, and secure
+          ride-hailing experience for both riders and drivers.
         </Typography>
       </Box>
       <Box

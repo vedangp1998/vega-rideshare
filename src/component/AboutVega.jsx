@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Button from "./ui/Button";
 import MobileImage from "../assets/Mobileonhand.svg";
 import CheckIcon from "@mui/icons-material/Check";
@@ -21,9 +21,9 @@ const AboutVega = () => {
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
-        // minHeight: "529px",
         height: "auto",
-        p: { xs: 6, md: 8, lg: 8 },
+        p: { xs: 3, sm: 4, md: 8, lg: 8 }, // reduced mobile padding only
+        marginY: { xs: "50px" },
       }}
     >
       {/* Left Side Image */}
@@ -33,7 +33,7 @@ const AboutVega = () => {
         alt="Vega App"
         sx={{
           position: "absolute",
-          top: { xs: "87%", sm: "65%", md: "42%", lg: "30%" },
+          top: { xs: "93%", sm: "65%", md: "42%", lg: "30%" },
           left: { xs: "62%", sm: "80%", md: 0 },
           transform: "translateY(-50%)",
           width: { xs: "150px", sm: "180px", md: "480px", lg: "530px" },

@@ -61,7 +61,7 @@ export default function SafetyFeatures() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <Box sx={{ width: "100%", maxWidth: "1280px", mx: "auto", px: 2, py: 8 }}>
+    <Box sx={{ width: "100%", maxWidth: "1440px", mx: "auto" }}>
       <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography
           component="h2"
@@ -194,7 +194,7 @@ export default function SafetyFeatures() {
             <Grid container>
               {/* Left Section */}
               <Grid item xs={12} md={6}>
-                <Box sx={{ p: 4, textAlign: "left" }}>
+                <Box sx={{ p: 2, textAlign: "left" }}>
                   <Typography variant="h5" fontWeight="bold" gutterBottom>
                     Emergency Button
                   </Typography>
@@ -233,71 +233,56 @@ export default function SafetyFeatures() {
                 </Box>
               </Grid>
 
+              {/* Right Section - Text and Images (without Card wrapper) */}
               <Grid item xs={12} md={6}>
-                <Box sx={{ p: 4 }}>
-                  <Card
-                    sx={{
-                      bgcolor: "rgba(30, 41, 59, 0.6)",
-                      backdropFilter: "blur(10px)",
-                      WebkitBackdropFilter: "blur(10px)",
-                      color: "white",
-                      borderRadius: 3,
-                      boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
-                      textAlign: "left",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                    }}
-                  >
-                    <CardContent>
-                      <Typography variant="h6" fontWeight="bold" gutterBottom>
-                        Clean and Well-Maintained Vehicles
-                      </Typography>
-                      <Typography paragraph>
-                        VEGA ensures all vehicles in our network maintain the
-                        highest standards of cleanliness and safety. We conduct
-                        regular inspections and require drivers to follow strict
-                        maintenance protocols.
-                      </Typography>
+                <Box sx={{ p: 2, textAlign: "left" }}>
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
+                    Clean and Well-Maintained Vehicles
+                  </Typography>
+                  <Typography paragraph>
+                    VEGA ensures all vehicles in our network maintain the
+                    highest standards of cleanliness and safety. We conduct
+                    regular inspections and require drivers to follow strict
+                    maintenance protocols.
+                  </Typography>
 
-                      <Grid container spacing={4}>
-                        {[1, 2].map((item) => (
-                          <Grid item xs={6} key={item}>
-                            <Box
-                              sx={{
-                                position: "relative",
-                                height: 128,
-                                borderRadius: 2,
-                                overflow: "hidden",
-                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)",
-                                transition:
-                                  "transform 0.3s ease, box-shadow 0.3s ease",
-                                "&:hover": {
-                                  transform: "scale(1.03)",
-                                  boxShadow:
-                                    "0 0 25px rgba(255, 255, 255, 0.5)",
-                                },
-                              }}
-                            >
-                              <CardMedia
-                                component="img"
-                                height="128"
-                                image={`https://picsum.photos/200`}
-                                alt={
-                                  item === 1
-                                    ? "Vehicle at night with lights"
-                                    : "Modern vehicle interior"
-                                }
-                                sx={{
-                                  width: "100%",
-                                  height: "100%",
-                                  objectFit: "cover",
-                                }}
-                              />
-                            </Box>
-                          </Grid>
-                        ))}
+                  <Grid container spacing={4}>
+                    {[1, 2].map((item) => (
+                      <Grid item xs={12} sm={6} key={item}>
+                        <Box
+                          sx={{
+                            position: "relative",
+                            height: 128,
+                            borderRadius: 2,
+                            overflow: "hidden",
+                            boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)",
+                            transition:
+                              "transform 0.3s ease, box-shadow 0.3s ease",
+                            "&:hover": {
+                              transform: "scale(1.03)",
+                              boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)",
+                            },
+                          }}
+                        >
+                          <CardMedia
+                            component="img"
+                            height="128"
+                            image={`https://picsum.photos/200?random=${item}`}
+                            alt={
+                              item === 1
+                                ? "Vehicle at night with lights"
+                                : "Modern vehicle interior"
+                            }
+                            sx={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        </Box>
                       </Grid>
-                    </CardContent>
-                  </Card>
+                    ))}
+                  </Grid>
                 </Box>
               </Grid>
             </Grid>

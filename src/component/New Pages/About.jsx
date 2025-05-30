@@ -273,7 +273,7 @@ export default function AboutPage() {
         </Box>
       </Box>
 
-      <Box sx={{ mt: { xs: 6, md: 4 }, py: { xs: 4, md: 4 } }}>
+      <Box sx={{ mt: { xs: 4, md: 4 }, py: { xs: 4, md: 4 } }}>
         <Typography
           variant="h4"
           component="h2"

@@ -18,12 +18,8 @@ import Logo from "../assets/Logo.svg";
 
 const Footer = () => {
   return (
-    <Box
-      sx={{
-        background: "#111111",
-        marginTop: "80px",
-      }}
-    >
+    <Box sx={{ background: "#f5f2e8", marginTop: "80px" }}>
+      {/* Top Section */}
       <Box
         sx={{
           display: "flex",
@@ -47,7 +43,7 @@ const Footer = () => {
           <Typography
             sx={{
               fontSize: { xs: "18px", sm: "20px", md: "24px" },
-              color: "#FF8C00",
+              color: "#b36b00", // warm amber
               fontWeight: 500,
               lineHeight: "24px",
             }}
@@ -57,7 +53,7 @@ const Footer = () => {
           <Typography
             sx={{
               fontSize: { xs: "28px", sm: "32px", md: "40px" },
-              color: "#FFFFFF",
+              color: "#1e1e1e",
               fontWeight: 700,
               lineHeight: "44px",
             }}
@@ -67,7 +63,7 @@ const Footer = () => {
           <Typography
             sx={{
               fontSize: { xs: "12px", sm: "16px", md: "20px" },
-              color: "#FFFFFF",
+              color: "#3e3e3e",
               fontWeight: 500,
             }}
           >
@@ -81,10 +77,13 @@ const Footer = () => {
         </Box>
       </Box>
 
-      <Box sx={{ bgcolor: "#151515", color: "#fff", py: 4, textAlign: "left" }}>
+      {/* Bottom Section */}
+      <Box
+        sx={{ bgcolor: "#eae5d8", color: "#1e1e1e", py: 4, textAlign: "left" }}
+      >
         <Container maxWidth="lg">
           <Grid container spacing={4}>
-            {/* Left Column - Logo and Description */}
+            {/* Left Column */}
             <Grid
               item
               xs={12}
@@ -104,7 +103,7 @@ const Footer = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#aaa",
+                    color: "#5a5242",
                     mb: 2,
                     maxWidth: 300,
                     fontSize: { xs: "14px", sm: "15px", md: "16px" },
@@ -119,30 +118,30 @@ const Footer = () => {
                 <Box sx={{ mb: 2 }}>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#4b3f2f", p: 0.5, mr: 1 }}
                   >
                     <InstagramIcon fontSize="small" />
                   </IconButton>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#4b3f2f", p: 0.5, mr: 1 }}
                   >
                     <WhatsAppIcon fontSize="small" />
                   </IconButton>
                   <IconButton
                     size="small"
-                    sx={{ color: "#fff", p: 0.5, mr: 1 }}
+                    sx={{ color: "#4b3f2f", p: 0.5, mr: 1 }}
                   >
                     <LinkedInIcon fontSize="small" />
                   </IconButton>
-                  <IconButton size="small" sx={{ color: "#fff", p: 0.5 }}>
+                  <IconButton size="small" sx={{ color: "#4b3f2f", p: 0.5 }}>
                     <TwitterIcon fontSize="small" />
                   </IconButton>
                 </Box>
               </Box>
             </Grid>
 
-            {/* Middle Column - Company Links */}
+            {/* Middle Column - Company */}
             <Grid
               item
               xs={6}
@@ -160,8 +159,8 @@ const Footer = () => {
                 sx={{
                   mb: 2,
                   fontWeight: "700",
-                  textAlign: "left",
                   fontSize: "22px",
+                  color: "#1e1e1e",
                 }}
               >
                 Company
@@ -174,76 +173,52 @@ const Footer = () => {
                   alignItems: { xs: "left", md: "flex-start" },
                 }}
               >
-                <Link
-                  href="#"
-                  underline="none"
-                  color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
-                >
-                  Features
-                </Link>
-                <Link
-                  href="#"
-                  underline="none"
-                  color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
-                >
-                  How it Works
-                </Link>
-                <Link
-                  href="#"
-                  underline="none"
-                  color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="#"
-                  underline="none"
-                  color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
-                >
-                  For Riders
-                </Link>
-                <Link
-                  href="#"
-                  underline="none"
-                  color="inherit"
-                  sx={{ color: "#aaa", fontSize: "0.875rem" }}
-                >
-                  For Drivers
-                </Link>
+                {[
+                  "Features",
+                  "How it Works",
+                  "About Us",
+                  "For Riders",
+                  "For Drivers",
+                ].map((text) => (
+                  <Link
+                    key={text}
+                    href="#"
+                    underline="none"
+                    sx={{ color: "#5a5242", fontSize: "0.875rem" }}
+                  >
+                    {text}
+                  </Link>
+                ))}
               </Box>
             </Grid>
 
-            {/* Middle Column - Contact Info */}
+            {/* Contact Column */}
             <Grid item xs={6} sm={3} md={2}>
               <Typography
                 variant="subtitle1"
                 sx={{
                   mb: 2,
                   fontWeight: "700",
-                  textAlign: "left",
                   fontSize: "22px",
+                  color: "#1e1e1e",
                 }}
               >
                 Contact
               </Typography>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#5a5242" }}>
                   +1 (201) 256 59856
                 </Typography>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#5a5242" }}>
                   example@gmail.com
                 </Typography>
-                <Typography variant="body2" sx={{ color: "#aaa" }}>
+                <Typography variant="body2" sx={{ color: "#5a5242" }}>
                   56, A highstreet, USA 56412
                 </Typography>
               </Box>
             </Grid>
 
-            {/* Right Column - Newsletter */}
+            {/* Newsletter Column */}
             <Grid item xs={12} sm={6} md={4}>
               <Typography
                 variant="subtitle1"
@@ -252,6 +227,7 @@ const Footer = () => {
                   fontWeight: "700",
                   textAlign: { xs: "center", md: "left" },
                   fontSize: "22px",
+                  color: "#1e1e1e",
                 }}
               >
                 Get Latest Information
@@ -264,8 +240,8 @@ const Footer = () => {
                   fullWidth
                   InputProps={{
                     sx: {
-                      bgcolor: "#333",
-                      color: "#aaa",
+                      bgcolor: "#fff",
+                      color: "#3e3e3e",
                       borderRadius: "8px 23px 23px 8px",
                       "& .MuiOutlinedInput-notchedOutline": {
                         border: "none",
@@ -277,7 +253,7 @@ const Footer = () => {
                 <Button
                   sx={{
                     bgcolor: "#002652",
-                    color: "white",
+                    color: "#fff",
                     ml: "-85px",
                     borderRadius: "30px",
                     textTransform: "none",
@@ -292,7 +268,7 @@ const Footer = () => {
             </Grid>
           </Grid>
 
-          {/* Bottom Row - Copyright and Policies */}
+          {/* Bottom Row */}
           <Box
             sx={{
               mt: 4,
@@ -301,38 +277,26 @@ const Footer = () => {
               flexDirection: { xs: "column", sm: "row" },
               justifyContent: "space-between",
               alignItems: { xs: "center", sm: "center" },
-              borderTop: "1px solid #2F2F2F",
+              borderTop: "1px solid #c5c0b0",
             }}
           >
-            <Typography variant="caption" sx={{ color: "#aaa" }}>
-              © 2025 <span style={{ color: "#fff" }}>VegaRide Share</span>. All
-              rights reserved.
+            <Typography variant="caption" sx={{ color: "#5a5242" }}>
+              © 2025 <span style={{ color: "#1e1e1e" }}>VegaRide Share</span>.
+              All rights reserved.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: { xs: 1, sm: 0 } }}>
-              <Link
-                href="#"
-                underline="none"
-                color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#"
-                underline="none"
-                color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="#"
-                underline="none"
-                color="inherit"
-                sx={{ color: "#aaa", fontSize: "0.75rem" }}
-              >
-                Cookie Policy
-              </Link>
+              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+                (item) => (
+                  <Link
+                    key={item}
+                    href="#"
+                    underline="none"
+                    sx={{ color: "#5a5242", fontSize: "0.75rem" }}
+                  >
+                    {item}
+                  </Link>
+                )
+              )}
             </Box>
           </Box>
         </Container>

@@ -95,13 +95,14 @@ const BookingProcess = () => {
                     lineHeight: { xs: "20px", sm: "22px", md: "22px" },
                     color: "rgba(17, 17, 17, 0.6)",
                     textAlign: "center",
+                    width: "100%",
+                    maxWidth: "250px",
+                    margin: "0px auto",
                   }}
                 >
-                  Book your ride in just a few taps with our intuitive
-                  <br style={{ display: "none" }} />
-                  and user-friendly app. Get where you need
-                  <br style={{ display: "none" }} />
-                  to go quickly and hassle-free.
+                  Book your ride in just a few taps with our intuitive and
+                  user-friendly app. Get where you need to go quickly and
+                  hassle-free.
                 </Typography>
               </Box>
             )}
@@ -135,13 +136,14 @@ const BookingProcess = () => {
                     lineHeight: { xs: "20px", sm: "22px", md: "22px" },
                     color: "rgba(17, 17, 17, 0.6)",
                     textAlign: "center",
+                    width: "100%",
+                    maxWidth: "300px",
+                    margin: "0px auto",
                   }}
                 >
-                  Track your ride in real time with accurate GPS
-                  <br style={{ display: "none" }} />
-                  navigation. Stay updated on your driver’s location
-                  <br style={{ display: "none" }} />
-                  and estimated arrival time.
+                  Track your ride in real time with accurate GPS navigation.
+                  Stay updated on your driver’s location and estimated arrival
+                  time.
                 </Typography>
               </Box>
             )}
