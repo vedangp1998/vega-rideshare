@@ -69,9 +69,9 @@ const BookingProcess = () => {
             lineHeight: 1.2,
           }}
         >
-          Benefits of{" "}
+          How it{" "}
           <Box component="span" sx={{ color: "#FF8C00" }}>
-            Vega Ride
+       works
           </Box>
         </Typography>
       </Box>

@@ -133,7 +133,7 @@ const Pricing = () => {
             },
           }}
         >
-          - Pricing and Plans
+          Pricing and Plans
         </Typography>
         <Typography
           sx={{
@@ -142,8 +142,6 @@ const Pricing = () => {
             lineHeight: { xs: "36px", sm: "42px", md: "44px" },
           }}
         >
-          Let’s Know the Pricing
-          <br />
           <span style={{ color: "#FF8C00" }}>Plan for You</span>
         </Typography>
       </Box>
@@ -158,11 +156,11 @@ const Pricing = () => {
         }}
       >
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          Bill Annually
+          Bill daily
         </Typography>
         <IOSSwitch />
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          Bill Annually
+          Bill monthly
         </Typography>
       </Box>
 

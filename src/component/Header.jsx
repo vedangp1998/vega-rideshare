@@ -26,7 +26,7 @@ const Header = () => {
     setOpen(open);
   };
 
-  const navItems = ["Features", "How It Works", "About Us", "For Driver"];
+  const navItems = ["About", "How It Works", "Riders", "Driver"];
 
   return (
     <Box
@@ -75,7 +75,7 @@ const Header = () => {
             {item}
           </Typography>
         ))}
-        <Button width={"106px"}>Contact</Button>
+        <Button width={"106px"}>Contact us</Button>
       </Box>
 
       <IconButton

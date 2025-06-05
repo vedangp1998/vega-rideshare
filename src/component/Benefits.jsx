@@ -30,14 +30,14 @@ const cardData = [
       rewarding.`,
     icon: OfferIcon,
   },
-  {
-    title: "SOS Button",
-    description: `Safety first! Our in-app SOS <br />
-      button ensures instant access to <br />
-      emergency support when <br />
-      needed.`,
-    icon: SosIcon,
-  },
+  // {
+  //   title: "SOS Button",
+  //   description: `Safety first! Our in-app SOS <br />
+  //     button ensures instant access to <br />
+  //     emergency support when <br />
+  //     needed.`,
+  //   icon: SosIcon,
+  // },
 ];
 
 const Benifit = () => {
@@ -61,7 +61,7 @@ const Benifit = () => {
             lineHeight: "44px",
           }}
         >
-          Benefits of <span style={{ color: "#FF8C00" }}>Vega Ride </span>
+          What we <span style={{ color: "#FF8C00" }}>prioritize </span>
         </Typography>
         <Typography
           sx={{

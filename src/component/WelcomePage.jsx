@@ -41,7 +41,7 @@ const WelcomePage = () => {
                 color: "#002652",
               }}
             >
-              -The Most Reliable Taxi Booking App
+              The Most Reliable Taxi Booking App
             </Typography>
             <Typography
               sx={{
@@ -61,7 +61,7 @@ const WelcomePage = () => {
                 fontSize: { xs: "14px", sm: "16px" },
                 maxWidth: { xs: "280px", sm: "350px", md: "400px" },
                 textAlign: { xs: "center", md: "left" },
-                my: { xs: 0.5, sm: 2 }, // Reduced vertical margin on mobile
+                my: { xs: 0.5, sm: 2 },
               }}
             >
               <Typography
@@ -69,13 +69,19 @@ const WelcomePage = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: { xs: "4px", sm: "8px" }, // Reduced gap on mobile
+                  gap: { xs: "4px", sm: "8px" },
                   alignItems: { xs: "center", md: "flex-start" },
                 }}
               >
-                <Box>🚖 Affordable rides for passengers</Box>
-                <Box>💰 Higher earnings for drivers</Box>
-                <Box>📱 Fast & reliable booking</Box>
+                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                  🚖 Affordable rides for passengers
+                </Box>
+                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                  💰 Higher earnings for drivers
+                </Box>
+                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                  📱 Fast & reliable booking
+                </Box>
               </Typography>
             </Box>
 
