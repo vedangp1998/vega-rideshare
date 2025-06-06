@@ -60,6 +60,7 @@ const CommentSection = () => {
       sx={{
         mt: 6,
       }}
+      id="contact-us"
     >
       <Box
         sx={{

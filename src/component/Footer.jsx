@@ -16,6 +16,30 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../assets/Logo.svg";
 
+const sectionIds = {
+  "About Us": "about-us",
+  "How it works": "how-it-works",
+  Riders: "riders",
+  Drivers: "drivers",
+  "Contact Us": "contact-us",
+};
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    const elementTop = section.getBoundingClientRect().top + window.pageYOffset;
+    const elementHeight = section.offsetHeight;
+    const viewportHeight = window.innerHeight;
+
+    const scrollPosition = elementTop - viewportHeight / 2 + elementHeight / 2;
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 const Footer = () => {
   return (
     <Box sx={{ background: "#f5f2e8", marginTop: "80px" }}>
@@ -174,17 +198,22 @@ const Footer = () => {
                 }}
               >
                 {[
-                  "Features",
-                  "How it Works",
                   "About Us",
-                  "For Riders",
-                  "For Drivers",
+                  "How it works",
+                  "Riders",
+                  "Drivers",
+                  "Contact Us",
                 ].map((text) => (
                   <Link
                     key={text}
-                    href="#"
+                    component="button"
                     underline="none"
-                    sx={{ color: "#5a5242", fontSize: "0.875rem" }}
+                    sx={{
+                      color: "#5a5242",
+                      fontSize: "0.875rem",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => scrollToSection(sectionIds[text])}
                   >
                     {text}
                   </Link>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { AnimatePresence } from "framer-motion";
@@ -28,11 +28,19 @@ const slides = [
   },
 ];
 
-const BookingProcess = () => {
+const HowItWorks = () => {
   const [index, setIndex] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const containerRef = useRef(null);
+
+  // Auto-scroll every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleDragEnd = (_, info) => {
     const offset = info.offset.x;
@@ -58,6 +66,7 @@ const BookingProcess = () => {
         mt: { xs: 6, md: 10 },
         mb: { xs: 6, md: 10 },
       }}
+      id="how-it-works"
     >
       {/* Heading */}
       <Box textAlign="center" mb={{ xs: 4, md: 6 }}>
@@ -71,7 +80,7 @@ const BookingProcess = () => {
         >
           How it{" "}
           <Box component="span" sx={{ color: "#FF8C00" }}>
-       works
+            works
           </Box>
         </Typography>
       </Box>
@@ -115,7 +124,7 @@ const BookingProcess = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
               <Typography
                 sx={{
@@ -137,7 +146,7 @@ const BookingProcess = () => {
                   color: "rgba(255,255,255,0.85)",
                 }}
               >
-                {slides[index].description}zz
+                {slides[index].description}
               </Typography>
             </motion.div>
           </AnimatePresence>
@@ -197,9 +206,9 @@ const BookingProcess = () => {
                 exit={{ opacity: 0, scale: 0.8, x: 50 }}
                 transition={{
                   type: "spring",
-                  stiffness: 260,
-                  damping: 25,
-                  mass: 0.8,
+                  stiffness: 120,
+                  damping: 20,
+                  mass: 1,
                 }}
               />
             );
@@ -210,4 +219,4 @@ const BookingProcess = () => {
   );
 };
 
-export default BookingProcess;
+export default HowItWorks;

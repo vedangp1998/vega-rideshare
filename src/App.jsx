@@ -1,18 +1,18 @@
+import React from "react";
 import "./App.css";
 import Header from "./component/Header";
-import React from "react";
 import WelcomePage from "./component/WelcomePage";
 import { Box } from "@mui/material";
 import AboutVega from "./component/AboutVega";
-import Benefits from "./component/Benefits";
-import BookingProcess from "./component/BookingProcess";
+import WhatWePrioritize from "./component/WhatWePrioritize";
+import HowItWorks from "./component/HowItWorks";
 import Pricing from "./component/Pricing";
 import Customer from "./component/Customer";
 import Footer from "./component/Footer";
-import NewAboutPage from "./component/New Pages/About";
 import NewBenefits from "./component/New Pages/Benefits";
-import SafetySection from "./component/New Pages/Safety";
 import CommentSection from "./component/New Pages/CommentSection";
+// import SafetySection from "./component/New Pages/Safety";
+// import NewAboutPage from "./component/New Pages/About";
 
 function App() {
   return (
@@ -21,11 +21,11 @@ function App() {
       <Box sx={{ marginInline: "2rem" }}>
         <WelcomePage />
         <AboutVega />
-        <NewAboutPage />
-        <Benefits />
+        {/* <NewAboutPage /> */}
+        <WhatWePrioritize />
         <NewBenefits />
-        <SafetySection />
-        <BookingProcess />
+        {/* <SafetySection /> */}
+        <HowItWorks />
         <Pricing />
         <Customer />
         <CommentSection />

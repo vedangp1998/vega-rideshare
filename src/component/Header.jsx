@@ -26,7 +26,32 @@ const Header = () => {
     setOpen(open);
   };
 
-  const navItems = ["About", "How It Works", "Riders", "Driver"];
+  const navItems = [
+    { label: "About Us", id: "about-us" },
+    { label: "How It Works", id: "how-it-works" },
+    { label: "Riders", id: "riders" },
+    { label: "Driver", id: "driver" },
+  ];
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const elementTop =
+        section.getBoundingClientRect().top + window.pageYOffset;
+      const elementHeight = section.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // Calculate the scroll position to center the element vertically
+      const scrollPosition =
+        elementTop - viewportHeight / 2 + elementHeight / 2;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
+    }
+    setOpen(false);
+  };
 
   return (
     <Box
@@ -54,12 +79,13 @@ const Header = () => {
           display: { xs: "none", md: "flex" },
           flexDirection: "row",
           alignItems: "center",
-          gap: { md: 2, lg: 4 },
+          gap: { md: 2, lg: 6 },
         }}
       >
         {navItems.map((item, index) => (
           <Typography
             key={index}
+            onClick={() => scrollToSection(item.id)}
             sx={{
               cursor: "pointer",
               color: "#111111",
@@ -72,10 +98,24 @@ const Header = () => {
               },
             }}
           >
-            {item}
+            {item.label}
           </Typography>
         ))}
-        <Button width={"106px"}>Contact us</Button>
+
+        <Button
+          variant="contained"
+          sx={{
+            fontSize: { md: "14px", lg: "16px" },
+            fontWeight: 500,
+            minWidth: "auto",
+            padding: "8px 16px",
+            textTransform: "none",
+            whiteSpace: "nowrap",
+          }}
+          onClick={() => scrollToSection("contact-us")}
+        >
+          Contact Us
+        </Button>
       </Box>
 
       <IconButton
@@ -83,7 +123,7 @@ const Header = () => {
           display: { xs: "flex", md: "none" },
           color: "#111111",
           padding: "8px",
-          marginLeft: "auto", // Ensures it stays right-aligned
+          marginLeft: "auto",
         }}
         onClick={toggleDrawer(true)}
         aria-label="Open menu"
@@ -133,6 +173,7 @@ const Header = () => {
               <ListItem
                 button
                 key={index}
+                onClick={() => scrollToSection(item.id)}
                 sx={{
                   py: 2,
                   borderRadius: "8px",
@@ -141,10 +182,9 @@ const Header = () => {
                     backgroundColor: "rgba(0, 0, 0, 0.04)",
                   },
                 }}
-                onClick={toggleDrawer(false)}
               >
                 <ListItemText
-                  primary={item}
+                  primary={item.label}
                   primaryTypographyProps={{
                     fontSize: "18px",
                     fontWeight: 500,
