@@ -65,11 +65,7 @@ const plansDaily = [
     title: "Daily Premium",
     description:
       "All the perks for top drivers. Enjoy lower fees, priority support and more.",
-    features: [
-      "Priority ride matching",
-      "Lower fees",
-      "Premium driver perks",
-    ],
+    features: ["Priority ride matching", "Lower fees", "Premium driver perks"],
   },
 ];
 
@@ -129,24 +125,12 @@ const Pricing = () => {
       <Box textAlign="center">
         <Typography
           sx={{
-            fontSize: {
-              xs: "20px",
-              sm: "20px",
-              md: "20px",
-              color: "rgba(17, 17, 17, 0.6)",
-            },
-          }}
-        >
-          Plans and Pricing
-        </Typography>
-        <Typography
-          sx={{
             fontSize: { xs: "30px", sm: "36px", md: "40px" },
             fontWeight: 700,
-            lineHeight: { xs: "36px", sm: "42px", md: "44px" },
+            lineHeight: { xs: "4px", sm: "6px", md: "10px" },
           }}
         >
-          <span style={{ color: "#FF8C00" }}>Plan for You</span>
+          <span style={{ color: "#FF8C00" }}>Plans and Pricing</span>
         </Typography>
       </Box>
 
@@ -220,8 +204,7 @@ const Pricing = () => {
                     style={{
                       fontSize: "20px",
                       fontWeight: 600,
-                      color:
-                        index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.5)",
+                      color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.5)",
                     }}
                   >
                     /{isMonthly ? "month" : "day"}
@@ -234,8 +217,7 @@ const Pricing = () => {
                   sx={{
                     fontSize: "14px",
                     fontWeight: 500,
-                    color:
-                      index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.6)",
+                    color: index === 1 ? "#FFFFFF" : "rgba(17, 17, 17, 0.6)",
                   }}
                 >
                   {plan.description}

@@ -2,6 +2,20 @@ import React from "react";
 import { Box, Typography, Grid, useMediaQuery, useTheme } from "@mui/material";
 import DownloadButton from "../assets/Download-Appstore.svg";
 import CarIcon from "../assets/CarIcon.png";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const WelcomePage = () => {
   const theme = useTheme();
@@ -23,73 +37,85 @@ const WelcomePage = () => {
         }}
       >
         <Grid item xs={12} md={6}>
-          <Box
-            sx={{
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: { xs: "center", md: "flex-start" },
-              gap: { xs: "12px", sm: "20px" },
-              mt: { xs: 1, sm: 2, md: 0 },
-              mb: { xs: 2, sm: 4, md: 0 },
+              alignItems: isMobile ? "center" : "flex-start",
+              gap: isMobile ? "12px" : "20px",
+              marginTop: isMobile ? "8px" : "0px",
+              marginBottom: isMobile ? "16px" : "0px",
             }}
           >
-            <Typography
-              sx={{
-                fontSize: { xs: "14px", sm: "16px", md: "18px" },
-                fontWeight: 500,
-                lineHeight: "24px",
-                color: "#002652",
-              }}
-            >
-              The Most Reliable Taxi Booking App
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "28px", sm: "36px", md: "40px", lg: "49px" },
-                fontWeight: 700,
-                lineHeight: { xs: "36px", sm: "46px", md: "54px" },
-                maxWidth: "100%",
-              }}
-            >
-              <span style={{ color: "#FF8C00" }}>Vega Ride Share</span>{" "}
-              {isMobile ? "" : <br />}
-              The Smarter Way to Ride!
-            </Typography>
-
-            <Box
-              sx={{
-                fontSize: { xs: "14px", sm: "16px" },
-                maxWidth: { xs: "280px", sm: "350px", md: "400px" },
-                textAlign: { xs: "center", md: "left" },
-                my: { xs: 0.5, sm: 2 },
-              }}
-            >
+            <motion.div variants={fadeUp}>
               <Typography
-                component="div"
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: { xs: "4px", sm: "8px" },
-                  alignItems: { xs: "center", md: "flex-start" },
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  fontWeight: 500,
+                  lineHeight: "24px",
+                  color: "#002652",
                 }}
               >
-                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                  🚖 Affordable rides for passengers
-                </Box>
-                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                  💰 Higher earnings for drivers
-                </Box>
-                <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                  📱 Fast & reliable booking
-                </Box>
+                The Most Reliable Taxi Booking App
               </Typography>
-            </Box>
+            </motion.div>
 
-            <Box
-              sx={{
+            <motion.div variants={fadeUp} custom={1}>
+              <Typography
+                sx={{
+                  fontSize: { xs: "28px", sm: "36px", md: "40px", lg: "49px" },
+                  fontWeight: 700,
+                  lineHeight: { xs: "36px", sm: "46px", md: "54px" },
+                  maxWidth: "100%",
+                }}
+              >
+                <span style={{ color: "#FF8C00" }}>Vega Ride Share</span>{" "}
+                {isMobile ? "" : <br />}
+                The Smarter Way to Ride!
+              </Typography>
+            </motion.div>
+
+            <motion.div variants={fadeUp} custom={2}>
+              <Box
+                sx={{
+                  fontSize: { xs: "14px", sm: "16px" },
+                  maxWidth: { xs: "280px", sm: "350px", md: "400px" },
+                  textAlign: { xs: "center", md: "left" },
+                  my: { xs: 0.5, sm: 2 },
+                }}
+              >
+                <Typography
+                  component="div"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: { xs: "4px", sm: "8px" },
+                    alignItems: { xs: "center", md: "flex-start" },
+                  }}
+                >
+                  <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                    🚖 Affordable rides for passengers
+                  </Box>
+                  <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                    💰 Higher earnings for drivers
+                  </Box>
+                  <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
+                    📱 Fast & reliable booking
+                  </Box>
+                </Typography>
+              </Box>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              custom={3}
+              style={{
                 cursor: "pointer",
-                mt: { xs: 1, sm: 2 },
-                width: { xs: "180px", sm: "220px", md: "250px" },
+                marginTop: isMobile ? "8px" : "16px",
+                width: isMobile ? "180px" : "250px",
               }}
             >
               <img
@@ -97,8 +123,8 @@ const WelcomePage = () => {
                 alt="Download from App Store"
                 style={{ width: "100%", height: "auto" }}
               />
-            </Box>
-          </Box>
+            </motion.div>
+          </motion.div>
         </Grid>
 
         <Grid
@@ -113,15 +139,19 @@ const WelcomePage = () => {
             mb: { xs: -1, sm: 0 },
           }}
         >
-          <Box
-            sx={{
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            style={{
               width: "100%",
-              maxWidth: { xs: "90%", sm: "85%", md: "100%" },
+              maxWidth: isMobile ? "90%" : "100%",
               height: "auto",
               display: "flex",
               justifyContent: "center",
-              py: { xs: 0, sm: 2, md: 3 },
-              mb: { xs: 0, sm: 2, md: 4 },
+              paddingTop: isMobile ? "0px" : "16px",
+              marginBottom: isMobile ? "0px" : "32px",
             }}
           >
             <img
@@ -135,7 +165,7 @@ const WelcomePage = () => {
                 marginBottom: isMobile ? "-10px" : "0",
               }}
             />
-          </Box>
+          </motion.div>
         </Grid>
       </Grid>
     </Box>

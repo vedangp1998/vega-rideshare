@@ -9,12 +9,18 @@ import {
   Link,
   IconButton,
 } from "@mui/material";
-import DownloadButton from "../assets/Download-Appstore.svg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../assets/Logo.svg";
+
+import AppStoreButton from "../assets/Download-Appstore.svg";
+import PlayStoreButton from "../assets/PlayStoreBadge.png";
+import { LucideStore } from "lucide-react";
+
+const AppStoreLink = "https://apps.apple.com/your-app-link";
+const PlayStoreLink = "https://play.google.com/store/apps?hl=en";
 
 const sectionIds = {
   "About Us": "about-us",
@@ -42,7 +48,7 @@ const scrollToSection = (id) => {
 
 const Footer = () => {
   return (
-    <Box sx={{ background: "#f5f2e8", marginTop: "80px" }}>
+    <Box sx={{ background: "#f5f2e8", marginTop: "80px", maxWidth: "100%" }}>
       {/* Top Section */}
       <Box
         sx={{
@@ -96,8 +102,34 @@ const Footer = () => {
             providing passengers with affordable and reliable rides.
           </Typography>
         </Box>
-        <Box sx={{ cursor: "pointer" }}>
-          <img src={DownloadButton} alt="download-btn" />
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <Box
+            component="a"
+            href={AppStoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ cursor: "pointer" }}
+          >
+            <img
+              src={AppStoreButton}
+              alt="Download on the App Store"
+              style={{ width: "200px", height: "65px", objectFit: "contain" }}
+            />
+          </Box>
+
+          <Box
+            component="a"
+            href={PlayStoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ cursor: "pointer" }}
+          >
+            <img
+              src={PlayStoreButton}
+              alt="Get it on Google Play"
+              style={{ width: "200px", height: "65px", objectFit: "contain" }}
+            />
+          </Box>
         </Box>
       </Box>
 
@@ -239,7 +271,7 @@ const Footer = () => {
                   +1 (201) 256 59856
                 </Typography>
                 <Typography variant="body2" sx={{ color: "#5a5242" }}>
-                  example@gmail.com
+                  support@vegacab.com
                 </Typography>
                 <Typography variant="body2" sx={{ color: "#5a5242" }}>
                   56, A highstreet, USA 56412

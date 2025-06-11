@@ -163,53 +163,57 @@ const AboutVega = () => {
             </Box>{" "}
             Rideshare
           </Typography>
+          <Box sx={{ maxWidth: "80%" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 2,
+                lineHeight: 1.7,
+                color: "#495057",
+                fontSize: { xs: "0.95rem", md: "1rem" },
+                maxWidth: { xs: "90%", sm: "100%" },
+                textAlign: "justify",
+              }}
+            >
+              VEGA Rideshare was founded in 2023 with a simple mission, create a
+              transportation platform that truly works for both drivers and
+              riders. We believe the rideshare industry needed a fresh approach.
+            </Typography>
 
-          <Typography
-            variant="body1"
-            sx={{
-              mb: 2,
-              lineHeight: 1.7,
-              color: "#495057",
-              fontSize: { xs: "0.95rem", md: "1rem" },
-              maxWidth: { xs: "90%", sm: "100%" },
-            }}
-          >
-            VEGA Rideshare was founded in 2023 with a simple mission: create a
-            transportation platform that truly works for both drivers and
-            riders. We believe the rideshare industry needed a fresh approach.
-          </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 2,
+                lineHeight: 1.7,
+                color: "#495057",
+                fontSize: { xs: "0.95rem", md: "1rem" },
+                maxWidth: { xs: "90%", sm: "100%" },
+                textAlign: "justify",
+              }}
+            >
+              Our innovative subscription model for drivers ensures they keep
+              100% of their ride fares, while our efficient operations allow us
+              to offer riders the best prices in the market. It's a win-win
+              approach that's transforming urban transportation.
+            </Typography>
 
-          <Typography
-            variant="body1"
-            sx={{
-              mb: 2,
-              lineHeight: 1.7,
-              color: "#495057",
-              fontSize: { xs: "0.95rem", md: "1rem" },
-              maxWidth: { xs: "90%", sm: "100%" },
-            }}
-          >
-            Our innovative subscription model for drivers ensures they keep 100%
-            of their ride fares, while our efficient operations allow us to
-            offer riders the best prices in the market. It's a win-win approach
-            that's transforming urban transportation.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{
-              mb: 4,
-              lineHeight: 1.7,
-              color: "#495057",
-              fontSize: { xs: "0.95rem", md: "1rem" },
-              maxWidth: { xs: "90%", sm: "100%" },
-            }}
-          >
-            Today, VEGA operates in over 50 cities nationwide and continues to
-            expand rapidly as more drivers and riders discover the VEGA
-            difference. We're not just another rideshare company – we're
-            building the future of transportation.
-          </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 4,
+                lineHeight: 1.7,
+                color: "#495057",
+                fontSize: { xs: "0.95rem", md: "1rem" },
+                maxWidth: { xs: "90%", sm: "100%" },
+                textAlign: "justify",
+              }}
+            >
+              Today, VEGA operates in over 50 cities nationwide and continues to
+              expand rapidly as more drivers and riders discover the VEGA
+              difference. We're not just another rideshare company – we're
+              building the future of transportation.
+            </Typography>
+          </Box>
 
           {/* <Box
           sx={{
