@@ -3,6 +3,7 @@ import { Box, Typography, Grid, useMediaQuery, useTheme } from "@mui/material";
 import DownloadButton from "../assets/Download-Appstore.svg";
 import CarIcon from "../assets/CarIcon.png";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,6 +21,8 @@ const fadeUp = {
 const WelcomePage = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery("(min-width:600px) and (max-width:899px)");
+  const { t } = useTranslation();
 
   return (
     <Box sx={{ overflow: "hidden", width: "100%" }}>
@@ -30,13 +33,23 @@ const WelcomePage = () => {
         justifyContent="center"
         sx={{
           width: "100%",
-          textAlign: { xs: "center", md: "left" },
           px: { xs: 2, sm: 4, md: 6 },
           pt: { xs: 1, sm: 2, md: 4 },
           pb: { xs: 2, sm: 4, md: 6 },
         }}
       >
-        <Grid item xs={12} md={6}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: isMobile || isTablet ? "center" : "flex-start",
+            justifyContent: "center",
+            textAlign: isMobile || isTablet ? "center" : "left",
+          }}
+        >
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -44,10 +57,11 @@ const WelcomePage = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: isMobile ? "center" : "flex-start",
+              alignItems: isMobile || isTablet ? "center" : "flex-start",
               gap: isMobile ? "12px" : "20px",
               marginTop: isMobile ? "8px" : "0px",
               marginBottom: isMobile ? "16px" : "0px",
+              width: "100%",
             }}
           >
             <motion.div variants={fadeUp}>
@@ -59,7 +73,7 @@ const WelcomePage = () => {
                   color: "#002652",
                 }}
               >
-                The Most Reliable Taxi Booking App
+                {t("tagline")}
               </Typography>
             </motion.div>
 
@@ -72,9 +86,9 @@ const WelcomePage = () => {
                   maxWidth: "100%",
                 }}
               >
-                <span style={{ color: "#FF8C00" }}>Vega Ride Share</span>{" "}
-                {isMobile ? "" : <br />}
-                The Smarter Way to Ride!
+                <span style={{ color: "#FF8C00" }}>{t("brand")}</span>{" "}
+                {(isMobile || isTablet) && <br />}
+                {t("headline")}
               </Typography>
             </motion.div>
 
@@ -82,8 +96,8 @@ const WelcomePage = () => {
               <Box
                 sx={{
                   fontSize: { xs: "14px", sm: "16px" },
-                  maxWidth: { xs: "280px", sm: "350px", md: "400px" },
-                  textAlign: { xs: "center", md: "left" },
+                  maxWidth: { xs: "100%", sm: "350px", md: "400px" },
+                  textAlign: "center",
                   my: { xs: 0.5, sm: 2 },
                 }}
               >
@@ -93,17 +107,17 @@ const WelcomePage = () => {
                     display: "flex",
                     flexDirection: "column",
                     gap: { xs: "4px", sm: "8px" },
-                    alignItems: { xs: "center", md: "flex-start" },
+                    alignItems: "center",
                   }}
                 >
                   <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                    🚖 Affordable rides for passengers
+                    {t("point1")}
                   </Box>
                   <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                    💰 Higher earnings for drivers
+                    {t("point2")}
                   </Box>
                   <Box sx={{ fontSize: { xs: "16px", sm: "20px" } }}>
-                    📱 Fast & reliable booking
+                    {t("point3")}
                   </Box>
                 </Typography>
               </Box>
@@ -120,7 +134,7 @@ const WelcomePage = () => {
             >
               <img
                 src={DownloadButton || "/placeholder.svg"}
-                alt="Download from App Store"
+                alt={t("downloadApp")}
                 style={{ width: "100%", height: "auto" }}
               />
             </motion.div>
@@ -150,6 +164,7 @@ const WelcomePage = () => {
               height: "auto",
               display: "flex",
               justifyContent: "center",
+              alignItems: "center",
               paddingTop: isMobile ? "0px" : "16px",
               marginBottom: isMobile ? "0px" : "32px",
             }}
