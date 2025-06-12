@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -8,19 +8,16 @@ import {
   Grid,
   Link,
   IconButton,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../assets/Logo.svg";
-
 import AppStoreButton from "../assets/Download-Appstore.svg";
 import PlayStoreButton from "../assets/PlayStoreBadge.png";
-import { LucideStore } from "lucide-react";
-
-const AppStoreLink = "https://apps.apple.com/your-app-link";
-const PlayStoreLink = "https://play.google.com/store/apps?hl=en";
 
 const sectionIds = {
   "About Us": "about-us",
@@ -36,7 +33,6 @@ const scrollToSection = (id) => {
     const elementTop = section.getBoundingClientRect().top + window.pageYOffset;
     const elementHeight = section.offsetHeight;
     const viewportHeight = window.innerHeight;
-
     const scrollPosition = elementTop - viewportHeight / 2 + elementHeight / 2;
 
     window.scrollTo({
@@ -47,6 +43,18 @@ const scrollToSection = (id) => {
 };
 
 const Footer = () => {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  const handleComingSoonClick = (e) => {
+    e.preventDefault();
+    setOpenSnackbar(true);
+  };
+
+  const handleSnackbarClose = (_, reason) => {
+    if (reason === "clickaway") return;
+    setOpenSnackbar(false);
+  };
+
   return (
     <Box sx={{ background: "#f5f2e8", marginTop: "80px", maxWidth: "100%" }}>
       {/* Top Section */}
@@ -73,7 +81,7 @@ const Footer = () => {
           <Typography
             sx={{
               fontSize: { xs: "18px", sm: "20px", md: "24px" },
-              color: "#b36b00", // warm amber
+              color: "#b36b00",
               fontWeight: 500,
               lineHeight: "24px",
             }}
@@ -102,12 +110,12 @@ const Footer = () => {
             providing passengers with affordable and reliable rides.
           </Typography>
         </Box>
+
         <Box sx={{ display: "flex", gap: 2 }}>
           <Box
             component="a"
-            href={AppStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            onClick={handleComingSoonClick}
             sx={{ cursor: "pointer" }}
           >
             <img
@@ -119,9 +127,8 @@ const Footer = () => {
 
           <Box
             component="a"
-            href={PlayStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            onClick={handleComingSoonClick}
             sx={{ cursor: "pointer" }}
           >
             <img
@@ -132,6 +139,22 @@ const Footer = () => {
           </Box>
         </Box>
       </Box>
+
+      {/* Snackbar */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity="info"
+          sx={{ width: "100%" }}
+        >
+          Coming Soon!
+        </Alert>
+      </Snackbar>
 
       {/* Bottom Section */}
       <Box
@@ -155,7 +178,6 @@ const Footer = () => {
                 <Box sx={{ mb: 2 }}>
                   <img src={Logo} alt="Logo" />
                 </Box>
-
                 <Typography
                   variant="body2"
                   sx={{
@@ -197,7 +219,7 @@ const Footer = () => {
               </Box>
             </Grid>
 
-            {/* Middle Column - Company */}
+            {/* Middle Column */}
             <Grid
               item
               xs={6}
@@ -229,13 +251,7 @@ const Footer = () => {
                   alignItems: { xs: "left", md: "flex-start" },
                 }}
               >
-                {[
-                  "About Us",
-                  "How it works",
-                  "Riders",
-                  "Drivers",
-                  "Contact Us",
-                ].map((text) => (
+                {Object.keys(sectionIds).map((text) => (
                   <Link
                     key={text}
                     component="button"

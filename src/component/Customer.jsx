@@ -3,7 +3,7 @@ import { Box, Typography, Grid } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
-function TestimonialCard({ compact = false }) {
+function TestimonialCard({ compact = false, rating = 5, comment, name, role }) {
   return (
     <Box
       sx={{
@@ -19,9 +19,9 @@ function TestimonialCard({ compact = false }) {
     >
       <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
         <Box sx={{ display: "flex", mb: 2 }}>
-          <Rating value={5} readOnly sx={{ color: "#FF8A00" }} />
+          <Rating value={rating} readOnly sx={{ color: "#FF8A00" }} />
           <Typography sx={{ ml: 1, color: "#FF8A00", fontWeight: "medium" }}>
-            5.0
+            {rating.toFixed(1)}
           </Typography>
         </Box>
 
@@ -48,8 +48,7 @@ function TestimonialCard({ compact = false }) {
             zIndex: 1,
           }}
         >
-          "As a passenger, I love that Vega rides are cheaper, and the drivers
-          are much happier. It's a win-win!"
+          "{comment}"
         </Typography>
       </Box>
 
@@ -61,7 +60,7 @@ function TestimonialCard({ compact = false }) {
             fontSize: "16px",
           }}
         >
-          Vedang Prajapati -{" "}
+          {name} -{" "}
           <span
             style={{
               fontSize: "17px",
@@ -69,7 +68,7 @@ function TestimonialCard({ compact = false }) {
               color: "rgba(0, 0, 0, 0.5)",
             }}
           >
-            SEO
+            {role}
           </span>
         </Typography>
       </Box>
@@ -118,7 +117,12 @@ const Customer = () => {
 
         <Grid container spacing={3}>
           <Grid item xs={12} md={4}>
-            <TestimonialCard />
+            <TestimonialCard
+              rating={5}
+              comment="As a passenger, I love that Vega rides are cheaper, and the drivers are much happier. It's a win-win!"
+              name="Vedang Prajapati"
+              role="SEO"
+            />
           </Grid>
 
           <Grid item xs={12} md={4}>
@@ -130,13 +134,30 @@ const Customer = () => {
                 height: "100%",
               }}
             >
-              <TestimonialCard compact />
-              <TestimonialCard compact />
+              <TestimonialCard
+                compact
+                rating={4.5}
+                comment="Using Vega has been a game-changer! The rides are smooth, and the pricing is transparent."
+                name="Ritika Sharma"
+                role="Product Designer"
+              />
+              <TestimonialCard
+                compact
+                rating={4.0}
+                comment="Drivers are always respectful and punctual. I genuinely feel safer choosing Vega."
+                name="Aman Verma"
+                role="Digital Marketer"
+              />
             </Box>
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <TestimonialCard />
+            <TestimonialCard
+              rating={5}
+              comment="I recommend Vega to all my friends. Great app, easy to use, and the customer support is excellent."
+              name="Sneha Iyer"
+              role="Software Engineer"
+            />
           </Grid>
         </Grid>
       </Box>
