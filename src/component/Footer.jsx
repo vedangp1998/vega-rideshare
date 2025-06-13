@@ -18,6 +18,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../assets/Logo.svg";
 import AppStoreButton from "../assets/Download-Appstore.svg";
 import PlayStoreButton from "../assets/PlayStoreBadge.png";
+import { useTranslation } from "react-i18next";
 
 const sectionIds = {
   "About Us": "about-us",
@@ -44,6 +45,7 @@ const scrollToSection = (id) => {
 
 const Footer = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const { t } = useTranslation();
 
   const handleComingSoonClick = (e) => {
     e.preventDefault();
@@ -86,7 +88,7 @@ const Footer = () => {
               lineHeight: "24px",
             }}
           >
-            Unlock Your Dream Ride: Your Taxi Booking Destination
+            {t("footer.unlockRide")}
           </Typography>
           <Typography
             sx={{
@@ -96,7 +98,7 @@ const Footer = () => {
               lineHeight: "44px",
             }}
           >
-            Download the App Now
+            {t("footer.downloadApp")}
           </Typography>
           <Typography
             sx={{
@@ -105,9 +107,9 @@ const Footer = () => {
               fontWeight: 500,
             }}
           >
-            Vega is a ride-hailing company with a mission to empower drivers
-            while <br />
-            providing passengers with affordable and reliable rides.
+            {t("footer.missionLine1")}
+            <br />
+            {t("footer.missionLine2")}
           </Typography>
         </Box>
 
@@ -120,7 +122,7 @@ const Footer = () => {
           >
             <img
               src={AppStoreButton}
-              alt="Download on the App Store"
+              alt={t("footer.downloadOnAppStore")}
               style={{ width: "200px", height: "65px", objectFit: "contain" }}
             />
           </Box>
@@ -133,7 +135,7 @@ const Footer = () => {
           >
             <img
               src={PlayStoreButton}
-              alt="Get it on Google Play"
+              alt={t("footer.getItOnGooglePlay")}
               style={{ width: "200px", height: "65px", objectFit: "contain" }}
             />
           </Box>
@@ -152,7 +154,7 @@ const Footer = () => {
           severity="info"
           sx={{ width: "100%" }}
         >
-          Coming Soon!
+          {t("footer.comingSoon")}
         </Alert>
       </Snackbar>
 
@@ -188,9 +190,7 @@ const Footer = () => {
                     lineHeight: { xs: "22px", sm: "24px", md: "26px" },
                   }}
                 >
-                  Vega Ride is built to empower both drivers and passengers. We
-                  believe in making transportation effortless, cost-effective,
-                  and rewarding for everyone.
+                  {t("footer.about")}
                 </Typography>
 
                 <Box sx={{ mb: 2 }}>
@@ -241,7 +241,7 @@ const Footer = () => {
                   color: "#1e1e1e",
                 }}
               >
-                Company
+                {t("footer.company")}
               </Typography>
               <Box
                 sx={{
@@ -263,7 +263,7 @@ const Footer = () => {
                     }}
                     onClick={() => scrollToSection(sectionIds[text])}
                   >
-                    {text}
+                    {t(`footer.sections.${text}`)}
                   </Link>
                 ))}
               </Box>
@@ -280,7 +280,7 @@ const Footer = () => {
                   color: "#1e1e1e",
                 }}
               >
-                Contact
+                {t("footer.contact")}
               </Typography>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
                 <Typography variant="body2" sx={{ color: "#5a5242" }}>
@@ -307,11 +307,11 @@ const Footer = () => {
                   color: "#1e1e1e",
                 }}
               >
-                Get Latest Information
+                {t("footer.getLatest")}
               </Typography>
               <Box sx={{ display: "flex", mb: 2 }}>
                 <TextField
-                  placeholder="email address"
+                  placeholder={t("footer.emailPlaceholder")}
                   variant="outlined"
                   size="small"
                   fullWidth
@@ -339,7 +339,7 @@ const Footer = () => {
                     mt: "3px",
                   }}
                 >
-                  Send
+                  {t("footer.send")}
                 </Button>
               </Box>
             </Grid>
@@ -358,22 +358,20 @@ const Footer = () => {
             }}
           >
             <Typography variant="caption" sx={{ color: "#5a5242" }}>
-              © 2025 <span style={{ color: "#1e1e1e" }}>VegaRide Share</span>.
-              All rights reserved.
+              © 2025 <span style={{ color: "#1e1e1e" }}>VegaRide Share</span>.{" "}
+              {t("footer.rights")}
             </Typography>
             <Box sx={{ display: "flex", gap: 2, mt: { xs: 1, sm: 0 } }}>
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-                (item) => (
-                  <Link
-                    key={item}
-                    href="#"
-                    underline="none"
-                    sx={{ color: "#5a5242", fontSize: "0.75rem" }}
-                  >
-                    {item}
-                  </Link>
-                )
-              )}
+              {["privacy", "terms", "cookies"].map((item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  underline="none"
+                  sx={{ color: "#5a5242", fontSize: "0.75rem" }}
+                >
+                  {t(`footer.${item}`)}
+                </Link>
+              ))}
             </Box>
           </Box>
         </Container>

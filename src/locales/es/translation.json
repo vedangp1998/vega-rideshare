@@ -19,5 +19,142 @@
   "rides": "Viajes",
   "happyRiders": "Pasajeros felices",
   "dedicatedDrivers": "Conductores dedicados",
-  "ridesCompleted": "Viajes completados"
+  "ridesCompleted": "Viajes completados",
+  "whatWe": "Lo que",
+  "prioritize": "priorizamos",
+  "prioritizeDesc": "Vega Ride está diseñada para ofrecer una experiencia de transporte perfecta, asequible y segura para pasajeros y conductores.",
+  "realTimeTripMonitoring": "Monitoreo de viajes en tiempo real",
+  "realTimeTripMonitoringDesc": "Nuestro sistema impulsado por IA monitorea continuamente todos los viajes en busca de actividad inusual o desvíos de ruta.",
+  "extensiveDriverScreening": "Evaluación rigurosa de conductores",
+  "extensiveDriverScreeningDesc": "Todos los conductores de VEGA se someten a verificaciones de antecedentes exhaustivas e inspecciones regulares de vehículos.",
+  "emergencyAlertSystem": "Sistema de alerta de emergencia",
+  "emergencyAlertSystemDesc": "Un toque en el botón de emergencia te conecta con servicios de emergencia y soporte de VEGA.",
+  "winWin": "Experiencia beneficiosa para todos",
+  "benefitsTitle": "Beneficios para todos",
+  "benefitsDescription": "Nuestro modelo único crea valor tanto para conductores como para pasajeros. Descubre cómo Vega está transformando la experiencia del transporte.",
+  "drivers": "Para conductores",
+  "forRiders": "Para pasajeros",
+  "keepFares": "Conserva el 100% de las tarifas",
+  "keepFaresDesc": "Sin comisiones: te quedas con cada dólar que ganas.",
+  "flexibleSchedule": "Horario flexible",
+  "flexibleScheduleDesc": "Conduce cuando quieras, sin horarios mínimos.",
+  "transparentEarnings": "Ganancias transparentes",
+  "transparentEarningsDesc": "Precios claros y simples para predecir tus ingresos.",
+  "driverProtection": "Protección al conductor",
+  "driverProtectionDesc": "Cobertura de seguro completa y soporte 24/7.",
+  "lowerFares": "Tarifas más bajas",
+  "lowerFaresDesc": "Disfruta de viajes más económicos sin perder calidad ni seguridad.",
+  "fastPickup": "Tiempos de recogida rápidos",
+  "fastPickupDesc": "Nuestro sistema eficiente reduce los tiempos de espera.",
+  "happyDrivers": "Conductores más felices",
+  "happyDriversDesc": "Conductores mejor pagados ofrecen mejor servicio.",
+  "safeJourneys": "Viajes seguros",
+  "safeJourneysDesc": "Revisión rigurosa de conductores y monitoreo en tiempo real.",
+  "readyToEarn": "¿Listo para ganar más?",
+  "readyToEarnDesc": "Únete a miles de conductores satisfechos que han aumentado sus ingresos con Vega.",
+  "betterRideTitle": "Experimenta mejores viajes",
+  "betterRideDesc": "Descarga la app de Vega y descubre por qué más pasajeros están cambiando a una experiencia más inteligente.",
+  "becomeDriver": "Conviértete en conductor",
+  "bookRide": "Reserva un viaje",
+  "howIt": "Cómo",
+  "works": "funciona",
+  "hiwTitle1": "Proceso de reserva fácil",
+  "hiwDesc1": "Reserva tu viaje en solo unos toques con nuestra app intuitiva y fácil de usar. Llega rápidamente a tu destino sin complicaciones.",
+  "hiwTitle2": "Seguimiento personalizado del viaje",
+  "hiwDesc2": "Sigue tu viaje en tiempo real con navegación GPS. Mantente informado sobre la ubicación y ETA de tu conductor fácilmente.",
+  "hiwTitle3": "Chat y llamada instantáneos con el conductor",
+  "hiwDesc3": "Comunícate al instante con tu conductor a través del chat o llamada desde la app para una experiencia más fluida y segura.",
+  "plansAndPricing": "Planes y Precios",
+  "billDaily": "Facturación diaria",
+  "billMonthly": "Facturación mensual",
+  "dailyTitle": "Plan Diario",
+  "dailyDesc": "Perfecto para conductores flexibles que quieren beneficios diarios.",
+  "dailyFeat1": "Horario flexible",
+  "dailyFeat2": "Acceso instantáneo a viajes",
+  "dailyFeat3": "Soporte básico",
+  "dailyFeat4": "Sin compromiso a largo plazo",
+  "monthlyTitle": "Plan Mensual",
+  "monthlyDesc": "Ideal para conductores frecuentes con beneficios a largo plazo.",
+  "monthlyFeat1": "Ahorra hasta un 30% con facturación mensual",
+  "monthlyFeat2": "Accede a todas las funciones premium",
+  "monthlyFeat3": "Asignación prioritaria de viajes",
+  "monthlyFeat4": "Atención al cliente VIP",
+  "contact-Us": "Contáctanos para más detalles en",
+  "customer": {
+    "title": "Nuestros Testimonios de Clientes",
+    "description": "Vega es una empresa de transporte con una misión de empoderar a los conductores mientras ofrece a los pasajeros viajes asequibles y confiables.",
+    "testimonials": [
+      {
+        "comment": "Como pasajero, me encanta que los viajes con Vega sean más baratos y que los conductores estén mucho más contentos. ¡Todos ganan!",
+        "name": "Vedang Prajapati",
+        "role": "SEO"
+      },
+      {
+        "comment": "¡Usar Vega ha cambiado todo! Los viajes son suaves y los precios son transparentes.",
+        "name": "Ritika Sharma",
+        "role": "Diseñadora de Producto"
+      },
+      {
+        "comment": "Los conductores siempre son respetuosos y puntuales. Realmente me siento más seguro eligiendo Vega.",
+        "name": "Aman Verma",
+        "role": "Especialista en Marketing Digital"
+      },
+      {
+        "comment": "Recomiendo Vega a todos mis amigos. Gran aplicación, fácil de usar y el soporte al cliente es excelente.",
+        "name": "Sneha Iyer",
+        "role": "Ingeniera de Software"
+      }
+    ]
+  },
+  "comment": {
+    "title": "Comparte tu experiencia",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Tu correo electrónico",
+    "commentLabel": "Tu comentario",
+    "commentPlaceholder": "Comparte tu experiencia con VEGA Rideshare...",
+    "submitButton": "Enviar comentario",
+    "recentTitle": "Comentarios recientes",
+    "recent": [
+      {
+        "timeAgo": "hace 2 días",
+        "content": "La función del botón de emergencia es impresionante. Tuve un problema menor durante un viaje y el equipo de soporte respondió de inmediato. ¡Gran enfoque en la seguridad!"
+      },
+      {
+        "timeAgo": "hace 1 semana",
+        "content": "He estado usando VEGA para mi viaje diario y he ahorrado mucho dinero en comparación con otras apps de transporte. Los conductores siempre son puntuales y profesionales."
+      },
+      {
+        "timeAgo": "hace 2 semanas",
+        "content": "Como conductor, gano mucho más con VEGA que con otras plataformas. El modelo de suscripción realmente me beneficia porque conduzco a tiempo completo."
+      }
+    ]
+  },
+  "footer": {
+    "unlockRide": "Desbloquea tu viaje soñado: tu destino para reservar taxis",
+    "downloadApp": "Descarga la aplicación ahora",
+    "missionLine1": "Vega es una empresa de transporte que empodera a los conductores",
+    "missionLine2": "mientras ofrece viajes asequibles y confiables a los pasajeros.",
+    "downloadOnAppStore": "Descargar en App Store",
+    "getItOnGooglePlay": "Obtener en Google Play",
+    "comingSoon": "¡Próximamente!",
+    "about": "Vega Ride está diseñado para empoderar tanto a conductores como pasajeros. Creemos en hacer el transporte sin esfuerzo, rentable y gratificante para todos.",
+    "company": "Empresa",
+    "sections": {
+      "About Us": "Sobre nosotros",
+      "How it works": "Cómo funciona",
+      "Riders": "Pasajeros",
+      "Drivers": "Conductores",
+      "Contact Us": "Contáctanos"
+    },
+    "contact": "Contacto",
+    "getLatest": "Recibe la información más reciente",
+    "emailPlaceholder": "dirección de correo electrónico",
+    "send": "Enviar",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "cookies": "Política de cookies"
+  }
 }

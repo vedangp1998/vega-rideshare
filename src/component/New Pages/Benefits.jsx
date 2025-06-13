@@ -21,6 +21,7 @@ import {
   Car,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -36,10 +37,11 @@ const fadeUpVariant = {
 };
 
 const Benefit = () => {
+  const { t } = useTranslation();
+
   return (
     <Box sx={{ marginY: 8 }} id="riders">
       <Box sx={{ maxWidth: "1200px", mx: "auto" }}>
-        {/* Header Section */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -49,7 +51,7 @@ const Benefit = () => {
         >
           <Box sx={{ textAlign: "center", mb: 8 }}>
             <Chip
-              label="Win-Win Experience"
+              label={t("winWin")}
               sx={{
                 bgcolor: "rgba(255, 140, 0, 0.1)",
                 color: "#FF8C00",
@@ -66,7 +68,7 @@ const Benefit = () => {
               component="h1"
               sx={{ fontWeight: 700, color: "text.primary", mb: 2 }}
             >
-              Benefits for Everyone
+              {t("benefitsTitle")}
             </Typography>
             <Typography
               variant="body1"
@@ -77,14 +79,11 @@ const Benefit = () => {
                 fontSize: "1.125rem",
               }}
             >
-              Our unique model creates value for both drivers and riders. See
-              how Vega is transforming the rideshare experience for everyone
-              involved.
+              {t("benefitsDescription")}
             </Typography>
           </Box>
         </motion.div>
 
-        {/* Benefits Grid */}
         <Grid container spacing={4}>
           {[...Array(2)].map((_, cardIdx) => (
             <Grid item xs={12} md={6} key={cardIdx}>
@@ -121,7 +120,7 @@ const Benefit = () => {
                     }
                     title={
                       <Typography variant="h5" sx={{ fontWeight: 700 }}>
-                        {cardIdx === 0 ? "For Drivers" : "For Riders"}
+                        {cardIdx === 0 ? t("drivers") : t("forRiders")}
                       </Typography>
                     }
                   />
@@ -131,52 +130,52 @@ const Benefit = () => {
                         ? [
                             {
                               icon: <DollarSign size={20} color="#16a34a" />,
-                              title: "Keep 100% of Fares",
-                              desc: "No commission fees means you take home every dollar you earn from rides.",
+                              title: t("keepFares"),
+                              desc: t("keepFaresDesc"),
                               bg: "#dcfce7",
                             },
                             {
                               icon: <Clock size={20} color="#2563eb" />,
-                              title: "Flexible Schedule",
-                              desc: "Drive when you want with no minimum hours requirement.",
+                              title: t("flexibleSchedule"),
+                              desc: t("flexibleScheduleDesc"),
                               bg: "#dbeafe",
                             },
                             {
                               icon: <TrendingUp size={20} color="#7c3aed" />,
-                              title: "Transparent Earnings",
-                              desc: "Clear, simple pricing lets you predict your income with confidence.",
+                              title: t("transparentEarnings"),
+                              desc: t("transparentEarningsDesc"),
                               bg: "#ede9fe",
                             },
                             {
                               icon: <Shield size={20} color="#f97316" />,
-                              title: "Driver Protection",
-                              desc: "Comprehensive insurance coverage and 24/7 support for peace of mind.",
+                              title: t("driverProtection"),
+                              desc: t("driverProtectionDesc"),
                               bg: "#ffedd5",
                             },
                           ]
                         : [
                             {
                               icon: <DollarSign size={20} color="#16a34a" />,
-                              title: "Lower Fares",
-                              desc: "Enjoy more affordable rides without sacrificing quality or safety.",
+                              title: t("lowerFares"),
+                              desc: t("lowerFaresDesc"),
                               bg: "#dcfce7",
                             },
                             {
                               icon: <Zap size={20} color="#facc15" />,
-                              title: "Fast Pickup Times",
-                              desc: "Our efficient matching system means shorter wait times.",
+                              title: t("fastPickup"),
+                              desc: t("fastPickupDesc"),
                               bg: "#fef9c3",
                             },
                             {
                               icon: <Smile size={20} color="#ec4899" />,
-                              title: "Happier Drivers",
-                              desc: "Drivers who earn more provide better service and friendlier rides.",
+                              title: t("happyDrivers"),
+                              desc: t("happyDriversDesc"),
                               bg: "#fce7f3",
                             },
                             {
                               icon: <CheckCircle size={20} color="#6366f1" />,
-                              title: "Safe Journeys",
-                              desc: "Rigorous driver screening and real-time trip monitoring for your safety.",
+                              title: t("safeJourneys"),
+                              desc: t("safeJourneysDesc"),
                               bg: "#e0e7ff",
                             },
                           ],
@@ -235,16 +234,16 @@ const Benefit = () => {
                     <Box sx={{ width: "100%" }}>
                       <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
                         {cardIdx === 0
-                          ? "Ready to earn more?"
-                          : "Experience better rides"}
+                          ? t("readyToEarn")
+                          : t("betterRideTitle")}
                       </Typography>
                       <Typography
                         variant="body2"
                         sx={{ mb: 2, color: "blue.100" }}
                       >
                         {cardIdx === 0
-                          ? "Join thousands of satisfied drivers who've increased their income by switching to Vega."
-                          : "Download the Vega app today and discover why more riders are making the switch to a smarter, smoother ride experience."}
+                          ? t("readyToEarnDesc")
+                          : t("betterRideDesc")}
                       </Typography>
                       <Button
                         sx={{
@@ -263,7 +262,7 @@ const Benefit = () => {
                           },
                         }}
                       >
-                        {cardIdx === 0 ? "Become a Driver" : "Book a Ride"}
+                        {cardIdx === 0 ? t("becomeDriver") : t("bookRide")}
                       </Button>
                     </Box>
                   </CardActions>

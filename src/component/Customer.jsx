@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import { useTranslation } from "react-i18next";
 
 function TestimonialCard({ compact = false, rating = 5, comment, name, role }) {
   return (
@@ -40,7 +41,7 @@ function TestimonialCard({ compact = false, rating = 5, comment, name, role }) {
         <Typography
           sx={{
             fontSize: compact ? "16px" : "24px",
-            fontWeight: compact ? "700" : "700",
+            fontWeight: "700",
             color: "#002652",
             mb: 2,
             mt: 1,
@@ -77,6 +78,8 @@ function TestimonialCard({ compact = false, rating = 5, comment, name, role }) {
 }
 
 const Customer = () => {
+  const { t } = useTranslation();
+
   return (
     <Box>
       <Box
@@ -102,16 +105,14 @@ const Customer = () => {
               fontWeight: 700,
             }}
           >
-            Our Customer Testimonials
+            {t("customer.title")}
           </Typography>
           <Typography
             sx={{
               fontSize: { xs: "16px", md: "20px" },
             }}
           >
-            Vega is a ride-hailing company with a mission to empower <br />{" "}
-            drivers while providing passengers with affordable and <br />{" "}
-            reliable rides.
+            {t("customer.description")}
           </Typography>
         </Box>
 
@@ -119,9 +120,9 @@ const Customer = () => {
           <Grid item xs={12} md={4}>
             <TestimonialCard
               rating={5}
-              comment="As a passenger, I love that Vega rides are cheaper, and the drivers are much happier. It's a win-win!"
-              name="Vedang Prajapati"
-              role="SEO"
+              comment={t("customer.testimonials.0.comment")}
+              name={t("customer.testimonials.0.name")}
+              role={t("customer.testimonials.0.role")}
             />
           </Grid>
 
@@ -137,16 +138,16 @@ const Customer = () => {
               <TestimonialCard
                 compact
                 rating={4.5}
-                comment="Using Vega has been a game-changer! The rides are smooth, and the pricing is transparent."
-                name="Ritika Sharma"
-                role="Product Designer"
+                comment={t("customer.testimonials.1.comment")}
+                name={t("customer.testimonials.1.name")}
+                role={t("customer.testimonials.1.role")}
               />
               <TestimonialCard
                 compact
                 rating={4.0}
-                comment="Drivers are always respectful and punctual. I genuinely feel safer choosing Vega."
-                name="Aman Verma"
-                role="Digital Marketer"
+                comment={t("customer.testimonials.2.comment")}
+                name={t("customer.testimonials.2.name")}
+                role={t("customer.testimonials.2.role")}
               />
             </Box>
           </Grid>
@@ -154,9 +155,9 @@ const Customer = () => {
           <Grid item xs={12} md={4}>
             <TestimonialCard
               rating={5}
-              comment="I recommend Vega to all my friends. Great app, easy to use, and the customer support is excellent."
-              name="Sneha Iyer"
-              role="Software Engineer"
+              comment={t("customer.testimonials.3.comment")}
+              name={t("customer.testimonials.3.name")}
+              role={t("customer.testimonials.3.role")}
             />
           </Grid>
         </Grid>

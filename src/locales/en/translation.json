@@ -19,5 +19,142 @@
   "rides": "Rides",
   "happyRiders": "Happy Riders",
   "dedicatedDrivers": "Dedicated Drivers",
-  "ridesCompleted": "Rides Completed"
+  "ridesCompleted": "Rides Completed",
+  "whatWe": "What we",
+  "prioritize": "prioritize",
+  "prioritizeDesc": "Vega Ride is designed to offer a seamless, affordable, and secure ride-hailing experience for both riders and drivers.",
+  "realTimeTripMonitoring": "Real-time Trip Monitoring",
+  "realTimeTripMonitoringDesc": "Our AI-powered system continuously monitors all rides for unusual activity or route deviations.",
+  "extensiveDriverScreening": "Extensive Driver Screening",
+  "extensiveDriverScreeningDesc": "All VEGA drivers undergo thorough background checks and regular vehicle inspections.",
+  "emergencyAlertSystem": "Emergency Alert System",
+  "emergencyAlertSystemDesc": "One tap on the emergency button connects you with emergency services and VEGA support.",
+  "winWin": "Win-Win Experience",
+  "benefitsTitle": "Benefits for Everyone",
+  "benefitsDescription": "Our unique model creates value for both drivers and riders. See how Vega is transforming the rideshare experience for everyone involved.",
+  "drivers": "For Drivers",
+  "forRiders": "For Riders",
+  "keepFares": "Keep 100% of Fares",
+  "keepFaresDesc": "No commission fees means you take home every dollar you earn from rides.",
+  "flexibleSchedule": "Flexible Schedule",
+  "flexibleScheduleDesc": "Drive when you want with no minimum hours requirement.",
+  "transparentEarnings": "Transparent Earnings",
+  "transparentEarningsDesc": "Clear, simple pricing lets you predict your income with confidence.",
+  "driverProtection": "Driver Protection",
+  "driverProtectionDesc": "Comprehensive insurance coverage and 24/7 support for peace of mind.",
+  "lowerFares": "Lower Fares",
+  "lowerFaresDesc": "Enjoy more affordable rides without sacrificing quality or safety.",
+  "fastPickup": "Fast Pickup Times",
+  "fastPickupDesc": "Our efficient matching system means shorter wait times.",
+  "happyDrivers": "Happier Drivers",
+  "happyDriversDesc": "Drivers who earn more provide better service and friendlier rides.",
+  "safeJourneys": "Safe Journeys",
+  "safeJourneysDesc": "Rigorous driver screening and real-time trip monitoring for your safety.",
+  "readyToEarn": "Ready to earn more?",
+  "readyToEarnDesc": "Join thousands of satisfied drivers who've increased their income by switching to Vega.",
+  "betterRideTitle": "Experience better rides",
+  "betterRideDesc": "Download the Vega app today and discover why more riders are making the switch to a smarter, smoother ride experience.",
+  "becomeDriver": "Become a Driver",
+  "bookRide": "Book a Ride",
+  "howIt": "How it",
+  "works": "works",
+  "hiwTitle1": "Easy Booking Process",
+  "hiwDesc1": "Book your ride in just a few taps with our intuitive and user-friendly app. Get where you need to go quickly and hassle-free.",
+  "hiwTitle2": "Personalized Ride Tracking",
+  "hiwDesc2": "Track your ride in real-time with GPS navigation. Stay updated on your driver’s location and ETA effortlessly.",
+  "hiwTitle3": "Instant Driver Chat & Call",
+  "hiwDesc3": "Communicate instantly with your driver through in-app chat or call for a smoother and safer experience.",
+  "plansAndPricing": "Plans and Pricing",
+  "billDaily": "Bill daily",
+  "billMonthly": "Bill monthly",
+  "dailyTitle": "Daily Plan",
+  "dailyDesc": "Perfect for flexible drivers who want day-to-day benefits.",
+  "dailyFeat1": "Flexible schedule",
+  "dailyFeat2": "Instant ride access",
+  "dailyFeat3": "Basic support",
+  "dailyFeat4": "No long-term commitment",
+  "monthlyTitle": "Monthly Plan",
+  "monthlyDesc": "Ideal for regular drivers with long-term benefits.",
+  "monthlyFeat1": "Save up to 30% with monthly billing",
+  "monthlyFeat2": "Access all premium features",
+  "monthlyFeat3": "Priority ride matching",
+  "monthlyFeat4": "VIP customer support",
+  "contact-Us": "Please reach out to us for more details at",
+  "customer": {
+    "title": "Our Customer Testimonials",
+    "description": "Vega is a ride-hailing company with a mission to empower drivers while providing passengers with affordable and reliable rides.",
+    "testimonials": [
+      {
+        "comment": "As a passenger, I love that Vega rides are cheaper, and the drivers are much happier. It's a win-win!",
+        "name": "Vedang Prajapati",
+        "role": "SEO"
+      },
+      {
+        "comment": "Using Vega has been a game-changer! The rides are smooth, and the pricing is transparent.",
+        "name": "Ritika Sharma",
+        "role": "Product Designer"
+      },
+      {
+        "comment": "Drivers are always respectful and punctual. I genuinely feel safer choosing Vega.",
+        "name": "Aman Verma",
+        "role": "Digital Marketer"
+      },
+      {
+        "comment": "I recommend Vega to all my friends. Great app, easy to use, and the customer support is excellent.",
+        "name": "Sneha Iyer",
+        "role": "Software Engineer"
+      }
+    ]
+  },
+  "comment": {
+    "title": "Share Your Experience",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Your email",
+    "commentLabel": "Your Comment",
+    "commentPlaceholder": "Share your experience with VEGA Rideshare...",
+    "submitButton": "Submit Comment",
+    "recentTitle": "Recent Comments",
+    "recent": [
+      {
+        "timeAgo": "2 days ago",
+        "content": "The emergency button feature is impressive. Had a minor issue during a ride and the support team responded instantly. Great safety focus!"
+      },
+      {
+        "timeAgo": "1 week ago",
+        "content": "I've been using VEGA for my daily commute and have saved so much money compared to other rideshare apps. The drivers are always on time and professional."
+      },
+      {
+        "timeAgo": "2 weeks ago",
+        "content": "As a driver, I'm earning much more with VEGA than I did with other platforms. The subscription model really works in my favor since I drive full-time."
+      }
+    ]
+  },
+  "footer": {
+    "unlockRide": "Unlock Your Dream Ride: Your Taxi Booking Destination",
+    "downloadApp": "Download the App Now",
+    "missionLine1": "Vega is a ride-hailing company with a mission to empower drivers",
+    "missionLine2": "while providing passengers with affordable and reliable rides.",
+    "downloadOnAppStore": "Download on the App Store",
+    "getItOnGooglePlay": "Get it on Google Play",
+    "comingSoon": "Coming Soon!",
+    "about": "Vega Ride is built to empower both drivers and passengers. We believe in making transportation effortless, cost-effective, and rewarding for everyone.",
+    "company": "Company",
+    "sections": {
+      "About Us": "About Us",
+      "How it works": "How it works",
+      "Riders": "Riders",
+      "Drivers": "Drivers",
+      "Contact Us": "Contact Us"
+    },
+    "contact": "Contact",
+    "getLatest": "Get Latest Information",
+    "emailPlaceholder": "email address",
+    "send": "Send",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  }
 }

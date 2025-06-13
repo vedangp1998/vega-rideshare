@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   Box,
   Card,
@@ -11,32 +10,32 @@ import {
   Icon,
 } from "@mui/material";
 import { MessageSquare, User } from "lucide-react";
-
-const recentComments = [
-  {
-    id: 1,
-    name: "Robert K.",
-    timeAgo: "2 days ago",
-    content:
-      "The emergency button feature is impressive. Had a minor issue during a ride and the support team responded instantly. Great safety focus!",
-  },
-  {
-    id: 2,
-    name: "Jessica T.",
-    timeAgo: "1 week ago",
-    content:
-      "I've been using VEGA for my daily commute and have saved so much money compared to other rideshare apps. The drivers are always on time and professional.",
-  },
-  {
-    id: 3,
-    name: "Michael W.",
-    timeAgo: "2 weeks ago",
-    content:
-      "As a driver, I'm earning much more with VEGA than I did with other platforms. The subscription model really works in my favor since I drive full-time.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const CommentSection = () => {
+  const { t } = useTranslation();
+
+  const recentComments = [
+    {
+      id: 1,
+      name: "Robert K.",
+      timeAgo: t("comment.recent.0.timeAgo"),
+      content: t("comment.recent.0.content"),
+    },
+    {
+      id: 2,
+      name: "Jessica T.",
+      timeAgo: t("comment.recent.1.timeAgo"),
+      content: t("comment.recent.1.content"),
+    },
+    {
+      id: 3,
+      name: "Michael W.",
+      timeAgo: t("comment.recent.2.timeAgo"),
+      content: t("comment.recent.2.content"),
+    },
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,18 +55,8 @@ const CommentSection = () => {
   };
 
   return (
-    <Box
-      sx={{
-        mt: 6,
-      }}
-      id="contact-us"
-    >
-      <Box
-        sx={{
-          maxWidth: "1440px",
-          margin: "0 auto",
-        }}
-      >
+    <Box sx={{ mt: 6 }} id="contact-us">
+      <Box sx={{ maxWidth: "1440px", margin: "0 auto" }}>
         <Box
           sx={{
             display: "grid",
@@ -104,7 +93,7 @@ const CommentSection = () => {
                       fontWeight: 700,
                     }}
                   >
-                    Share Your Experience
+                    {t("comment.title")}
                   </Typography>
                 </Box>
               }
@@ -119,26 +108,26 @@ const CommentSection = () => {
                   sx={{ display: "flex", flexDirection: "column", gap: "8px" }}
                 >
                   <Typography sx={{ color: "#D1D5DB", fontSize: "0.875rem" }}>
-                    Name
+                    {t("comment.nameLabel")}
                   </Typography>
                   <TextField
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Your name"
+                    placeholder={t("comment.namePlaceholder")}
                     value={formData.name}
                     onChange={handleChange}
                     required
                     sx={{
-                      backgroundColor: "#334155", // slate-700
+                      backgroundColor: "#334155",
                       "& .MuiOutlinedInput-root": {
-                        "& fieldset": { borderColor: "#475569" }, // slate-600
+                        "& fieldset": { borderColor: "#475569" },
                         "&:hover fieldset": { borderColor: "#475569" },
                         "&.Mui-focused fieldset": { borderColor: "#475569" },
                         "& input": { color: "#FFFFFF", fontSize: "1rem" },
                       },
                       "& .MuiInputBase-input::placeholder": {
-                        color: "#9CA3AF", // gray-400
+                        color: "#9CA3AF",
                         opacity: 1,
                       },
                     }}
@@ -149,13 +138,13 @@ const CommentSection = () => {
                   sx={{ display: "flex", flexDirection: "column", gap: "8px" }}
                 >
                   <Typography sx={{ color: "#D1D5DB", fontSize: "0.875rem" }}>
-                    Email
+                    {t("comment.emailLabel")}
                   </Typography>
                   <TextField
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="Your email"
+                    placeholder={t("comment.emailPlaceholder")}
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -179,14 +168,14 @@ const CommentSection = () => {
                   sx={{ display: "flex", flexDirection: "column", gap: "8px" }}
                 >
                   <Typography sx={{ color: "#D1D5DB", fontSize: "0.875rem" }}>
-                    Your Comment
+                    {t("comment.commentLabel")}
                   </Typography>
                   <TextField
                     id="comment"
                     name="comment"
                     multiline
                     rows={6}
-                    placeholder="Share your experience with VEGA Rideshare..."
+                    placeholder={t("comment.commentPlaceholder")}
                     value={formData.comment}
                     onChange={handleChange}
                     required
@@ -226,7 +215,7 @@ const CommentSection = () => {
                     },
                   }}
                 >
-                  Submit Comment
+                  {t("comment.submitButton")}
                 </Button>
               </Box>
             </CardContent>
@@ -246,7 +235,7 @@ const CommentSection = () => {
             <Typography
               sx={{ fontSize: "1.5rem", fontWeight: 700, color: "#111827" }}
             >
-              Recent Comments
+              {t("comment.recentTitle")}
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
@@ -274,7 +263,7 @@ const CommentSection = () => {
                           width: 48,
                           height: 48,
                           borderRadius: "50%",
-                          backgroundColor: "#FFF7ED", // lighter orange
+                          backgroundColor: "#FFF7ED",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -287,7 +276,6 @@ const CommentSection = () => {
                           />
                         </Icon>
                       </Box>
-
                       <Box
                         sx={{
                           flex: 1,

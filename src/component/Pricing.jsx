@@ -295,6 +295,7 @@ import { Box, Divider, Switch, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CheckIcon from "@mui/icons-material/CheckCircleOutline";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -331,30 +332,32 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const dailyPlan = {
-  title: "Daily Plan",
-  description: "Perfect for flexible drivers who want day-to-day benefits.",
-  features: [
-    "Flexible schedule",
-    "Instant ride access",
-    "Basic support",
-    "No long-term commitment",
-  ],
-};
-
-const monthlyPlan = {
-  title: "Monthly Plan",
-  description: "Ideal for regular drivers with long-term benefits.",
-  features: [
-    "Save up to 30% with monthly billing",
-    "Access all premium features",
-    "Priority ride matching",
-    "VIP customer support",
-  ],
-};
-
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
+  const { t } = useTranslation();
+
+  const dailyPlan = {
+    title: t("dailyTitle"),
+    description: t("dailyDesc"),
+    features: [
+      t("dailyFeat1"),
+      t("dailyFeat2"),
+      t("dailyFeat3"),
+      t("dailyFeat4"),
+    ],
+  };
+
+  const monthlyPlan = {
+    title: t("monthlyTitle"),
+    description: t("monthlyDesc"),
+    features: [
+      t("monthlyFeat1"),
+      t("monthlyFeat2"),
+      t("monthlyFeat3"),
+      t("monthlyFeat4"),
+    ],
+  };
+
   const plan = isMonthly ? monthlyPlan : dailyPlan;
 
   return (
@@ -380,7 +383,7 @@ const Pricing = () => {
             color: "#002652",
           }}
         >
-          <span style={{ color: "#FF8C00" }}>Plans and Pricing</span>
+          <span style={{ color: "#FF8C00" }}>{t("plansAndPricing")}</span>
         </Typography>
       </Box>
 
@@ -395,18 +398,18 @@ const Pricing = () => {
         }}
       >
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          Bill daily
+          {t("billDaily")}
         </Typography>
         <IOSSwitch
           checked={isMonthly}
           onChange={() => setIsMonthly((prev) => !prev)}
         />
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          Bill monthly
+          {t("billMonthly")}
         </Typography>
       </Box>
 
-      {/* Single Plan Card */}
+      {/* Plan Card */}
       <AnimatePresence mode="wait">
         <motion.div
           key={isMonthly ? "monthly" : "daily"}
@@ -497,7 +500,7 @@ const Pricing = () => {
                   mt: 2,
                 }}
               >
-                Please reach out to us for more details at{" "}
+                {t("contact-Us")}{" "}
                 <a
                   href="mailto:sales@vegacab.com"
                   style={{

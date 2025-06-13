@@ -1,40 +1,37 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import IphoneTopImage from "../assets/IphoneTop.svg";
 import IphoneBottomImage from "../assets/iphoneBottom.svg";
 
-const slides = [
-  {
-    title: "Easy Booking Process",
-    description:
-      "Book your ride in just a few taps with our intuitive and user-friendly app. Get where you need to go quickly and hassle-free.",
-    image: IphoneTopImage,
-  },
-  {
-    title: "Personalized Ride Tracking",
-    description:
-      "Track your ride in real-time with GPS navigation. Stay updated on your driver’s location and ETA effortlessly.",
-    image: IphoneBottomImage,
-  },
-  {
-    title: "Instant Driver Chat & Call",
-    description:
-      "Communicate instantly with your driver through in-app chat or call for a smoother and safer experience.",
-    image: IphoneTopImage,
-  },
-];
-
 const HowItWorks = () => {
+  const { t } = useTranslation();
+  const slides = [
+    {
+      title: t("hiwTitle1"),
+      description: t("hiwDesc1"),
+      image: IphoneTopImage,
+    },
+    {
+      title: t("hiwTitle2"),
+      description: t("hiwDesc2"),
+      image: IphoneBottomImage,
+    },
+    {
+      title: t("hiwTitle3"),
+      description: t("hiwDesc3"),
+      image: IphoneTopImage,
+    },
+  ];
+
   const [index, setIndex] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const containerRef = useRef(null);
 
-  // Auto-scroll every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -45,7 +42,6 @@ const HowItWorks = () => {
   const handleDragEnd = (_, info) => {
     const offset = info.offset.x;
     const velocity = info.velocity.x;
-
     if (offset < -50 || velocity < -500) {
       setIndex((prev) => (prev + 1) % slides.length);
     } else if (offset > 50 || velocity > 500) {
@@ -78,14 +74,14 @@ const HowItWorks = () => {
             lineHeight: 1.2,
           }}
         >
-          How it{" "}
+          {t("howIt")}{" "}
           <Box component="span" sx={{ color: "#FF8C00" }}>
-            works
+            {t("works")}
           </Box>
         </Typography>
       </Box>
 
-      {/* Carousel container */}
+      {/* Carousel */}
       <Box
         sx={{
           display: "flex",
@@ -99,7 +95,7 @@ const HowItWorks = () => {
         }}
         ref={containerRef}
       >
-        {/* Content box */}
+        {/* Content */}
         <Box
           sx={{
             flex: 1,
@@ -152,7 +148,7 @@ const HowItWorks = () => {
           </AnimatePresence>
         </Box>
 
-        {/* Image stack */}
+        {/* Image */}
         <Box
           sx={{
             position: "relative",
@@ -166,7 +162,6 @@ const HowItWorks = () => {
           {[2, 1, 0].map((offset) => {
             const slideIndex = (index + offset) % slides.length;
             const slide = slides[slideIndex];
-
             const scale = 1 - (2 - offset) * 0.08;
             const xOffset = (2 - offset) * 40;
             const zIndex = 10 + offset;
