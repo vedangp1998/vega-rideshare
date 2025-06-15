@@ -33,13 +33,22 @@ const MotionBox = motion(Box);
 
 const WhatWePrioritize = () => {
   const { t } = useTranslation();
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const isInView1 = useInView(ref1, { once: true, amount: 0.3 });
+  const isInView2 = useInView(ref2, { once: true, amount: 0.3 });
+  const isInView3 = useInView(ref3, { once: true, amount: 0.3 });
+
+  const refs = [ref1, ref2, ref3];
+  const views = [isInView1, isInView2, isInView3];
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <Box
@@ -82,6 +91,8 @@ const WhatWePrioritize = () => {
       <Grid container spacing={4}>
         {features.map((feature, index) => {
           const Icon = feature.icon;
+          const ref = refs[index];
+          const isInView = views[index];
 
           return (
             <Grid item xs={12} md={4} key={index}>
@@ -90,7 +101,7 @@ const WhatWePrioritize = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={cardVariants}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5 }}
                 sx={{ height: "100%" }}
               >
                 <Card

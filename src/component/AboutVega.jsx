@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import Button from "./ui/Button";
-import MobileImage from "../assets/Mobileonhand.svg";
+import MobileImage from "../assets/MobileOnHand_2.png";
+// import MobileImage from "../assets/Mobileonhand.svg";
+
 import { useTranslation } from "react-i18next";
 import CheckIcon from "@mui/icons-material/Check";
 
@@ -38,12 +40,13 @@ const AboutVega = () => {
           alt="Vega App"
           sx={{
             position: "absolute",
-            top: { xs: "93%", sm: "93%", md: "42%", lg: "42%" },
-            left: { xs: "76%", sm: "80%", md: 0 },
+            top: { xs: "93%", sm: "93%", md: "42%", lg: "46%" },
+            left: { xs: "76%", sm: "80%", md: "5%" },
             transform: "translateY(-50%)",
-            width: { xs: "110px", sm: "180px", md: "480px", lg: "530px" },
+            width: { xs: "110px", sm: "180px", md: "450px", lg: "580px" },
             height: "auto",
             objectFit: "contain",
+            borderTop: "'none",
           }}
         />
 
