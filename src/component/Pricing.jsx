@@ -113,7 +113,7 @@ const Pricing = () => {
           onChange={() => setIsMonthly((prev) => !prev)}
         />
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          {t("billMonthly")}
+          {t("Monthly")}
         </Typography>
       </Box>
 
