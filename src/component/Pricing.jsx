@@ -106,7 +106,7 @@ const Pricing = () => {
         }}
       >
         <Typography sx={{ fontSize: { xs: "16px", sm: "18px", md: "20px" } }}>
-          {t("billDaily")}
+          {t("Daily")}
         </Typography>
         <IOSSwitch
           checked={isMonthly}
