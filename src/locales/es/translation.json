@@ -64,7 +64,7 @@
   "hiwDesc2": "Sigue tu viaje en tiempo real con navegación GPS. Mantente informado sobre la ubicación y ETA de tu conductor fácilmente.",
   "hiwTitle3": "Chat y llamada instantáneos con el conductor",
   "hiwDesc3": "Comunícate al instante con tu conductor a través del chat o llamada desde la app para una experiencia más fluida y segura.",
-  "plansAndPricing": "Planes y Precios",
+  "plans": "Planes",
   "billDaily": "Facturación diaria",
   "billMonthly": "Facturación mensual",
   "dailyTitle": "Plan Diario",
@@ -85,23 +85,23 @@
     "description": "Vega es una empresa de transporte con una misión de empoderar a los conductores mientras ofrece a los pasajeros viajes asequibles y confiables.",
     "testimonials": [
       {
-        "comment": "Como pasajero, me encanta que los viajes con Vega sean más baratos y que los conductores estén mucho más contentos. ¡Todos ganan!",
-        "name": "Vedang Prajapati",
+        "comment": "Como pasajero, me encanta que los viajes con Vega sean más baratos y que los conductores estén mucho más contentos. ¡Es un ganar-ganar!",
+        "name": "Alex Thompson",
         "role": "SEO"
       },
       {
-        "comment": "¡Usar Vega ha cambiado todo! Los viajes son suaves y los precios son transparentes.",
-        "name": "Ritika Sharma",
+        "comment": "¡Usar Vega ha sido un cambio total! Los viajes son suaves y los precios son transparentes.",
+        "name": "Emily Carter",
         "role": "Diseñadora de Producto"
       },
       {
         "comment": "Los conductores siempre son respetuosos y puntuales. Realmente me siento más seguro eligiendo Vega.",
-        "name": "Aman Verma",
+        "name": "James Walker",
         "role": "Especialista en Marketing Digital"
       },
       {
-        "comment": "Recomiendo Vega a todos mis amigos. Gran aplicación, fácil de usar y el soporte al cliente es excelente.",
-        "name": "Sneha Iyer",
+        "comment": "Recomiendo Vega a todos mis amigos. Excelente aplicación, fácil de usar y con un servicio al cliente excepcional.",
+        "name": "Sophie Miller",
         "role": "Ingeniera de Software"
       }
     ]

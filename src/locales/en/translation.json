@@ -64,7 +64,7 @@
   "hiwDesc2": "Track your ride in real-time with GPS navigation. Stay updated on your driver’s location and ETA effortlessly.",
   "hiwTitle3": "Instant Driver Chat & Call",
   "hiwDesc3": "Communicate instantly with your driver through in-app chat or call for a smoother and safer experience.",
-  "plansAndPricing": "Plans and Pricing",
+  "plans": "Plans",
   "billDaily": "Bill daily",
   "billMonthly": "Bill monthly",
   "dailyTitle": "Daily Plan",
@@ -86,22 +86,22 @@
     "testimonials": [
       {
         "comment": "As a passenger, I love that Vega rides are cheaper, and the drivers are much happier. It's a win-win!",
-        "name": "Vedang Prajapati",
+        "name": "Alex Thompson",
         "role": "SEO"
       },
       {
         "comment": "Using Vega has been a game-changer! The rides are smooth, and the pricing is transparent.",
-        "name": "Ritika Sharma",
+        "name": "Emily Carter",
         "role": "Product Designer"
       },
       {
         "comment": "Drivers are always respectful and punctual. I genuinely feel safer choosing Vega.",
-        "name": "Aman Verma",
+        "name": "James Walker",
         "role": "Digital Marketer"
       },
       {
         "comment": "I recommend Vega to all my friends. Great app, easy to use, and the customer support is excellent.",
-        "name": "Sneha Iyer",
+        "name": "Sophie Miller",
         "role": "Software Engineer"
       }
     ]

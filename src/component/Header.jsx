@@ -13,10 +13,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import LanguageIcon from "@mui/icons-material/Language";
 import Button from "./ui/Button";
 import Logo from "../assets/Logo.svg";
 import { useTranslation } from "react-i18next";
-// import LanguageIcon from "@mui/icons-material/Language";
 import { useMediaQuery } from "@mui/material";
 
 const Header = () => {
@@ -113,21 +113,13 @@ const Header = () => {
         </Button>
 
         <Box
+          className="relative flex items-center rounded-full bg-transparent hover:bg-gray-100 transition-all duration-300"
           sx={{
-            display: "flex",
-            alignItems: "center",
-            border: "1px solid #ccc",
-            borderRadius: "20px",
-            padding: "4px 10px",
-            backgroundColor: "#f7f7f7",
-            transition: "all 0.3s ease",
-            "&:hover": {
-              backgroundColor: "#e0e0e0",
-            },
+            border: "1px solid #E4E4E4",
+            padding: { xs: "4px 8px", sm: "6px 12px" },
           }}
         >
-          {/* <LanguageIcon sx={{ fontSize: 20, mr: 1, color: "#111" }} /> */}
-
+          <LanguageIcon sx={{ fontSize: { xs: 18, sm: 20 }, mr: 1, color: "#111111" }} />
           <Select
             value={i18n.language}
             onChange={handleLanguageChange}
@@ -140,6 +132,8 @@ const Header = () => {
                   borderRadius: 12,
                   boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
                   marginTop: 8,
+                  backgroundColor: "#ffffff",
+                  minWidth: "100px",
                 },
               },
               anchorOrigin: {
@@ -152,20 +146,23 @@ const Header = () => {
               },
             }}
             sx={{
-              fontSize: "14px",
+              fontSize: { xs: "13px", sm: "14px" },
               fontWeight: 500,
               color: "#111111",
-              minWidth: "60px",
+              minWidth: { xs: "50px", sm: "60px" },
               "& .MuiSelect-select": {
-                padding: "2px 6px",
+                padding: { xs: "2px 4px", sm: "2px 6px" },
+              },
+              "&:hover": {
+                color: "#333333",
               },
             }}
           >
             <MenuItem value="en">
-              <Box component="span">EN</Box>
+              <Box component="span" className="font-medium">EN</Box>
             </MenuItem>
             <MenuItem value="es">
-              <Box component="span">ES</Box>
+              <Box component="span" className="font-medium">ES</Box>
             </MenuItem>
           </Select>
         </Box>
@@ -177,69 +174,67 @@ const Header = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            gap: { xs: 1, sm: 2 },
           }}
         >
-          {isMobile && (
-            <Box
+          <Box
+            className="relative flex items-center rounded-full bg-transparent hover:bg-gray-100 transition-all duration-300"
+            sx={{
+              border: "1px solid #E4E4E4",
+              padding: { xs: "3px 6px", sm: "4px 8px" },
+            }}
+          >
+            <LanguageIcon sx={{ fontSize: { xs: 16, sm: 18 }, mr: 0.5, color: "#111111" }} />
+            <Select
+              value={i18n.language}
+              onChange={handleLanguageChange}
+              variant="standard"
+              disableUnderline
+              input={<InputBase />}
+              MenuProps={{
+                PaperProps: {
+                  style: {
+                    borderRadius: 12,
+                    boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
+                    marginTop: 8,
+                    backgroundColor: "#ffffff",
+                    minWidth: { xs: "80px", sm: "100px" },
+                  },
+                },
+                anchorOrigin: {
+                  vertical: "bottom",
+                  horizontal: "right",
+                },
+                transformOrigin: {
+                  vertical: "top",
+                  horizontal: "right",
+                },
+              }}
               sx={{
-                display: "flex",
-                alignItems: "center",
-                border: "1px solid #ccc",
-                borderRadius: "20px",
-                padding: "4px 10px",
-                backgroundColor: "#f7f7f7",
-                transition: "all 0.3s ease",
+                fontSize: { xs: "12px", sm: "13px" },
+                fontWeight: 500,
+                color: "#111111",
+                minWidth: { xs: "40px", sm: "50px" },
+                "& .MuiSelect-select": {
+                  padding: { xs: "1px 3px", sm: "2px 4px" },
+                },
                 "&:hover": {
-                  backgroundColor: "#e0e0e0",
+                  color: "#333333",
                 },
               }}
             >
-              <Select
-                value={i18n.language}
-                onChange={handleLanguageChange}
-                variant="standard"
-                disableUnderline
-                input={<InputBase />}
-                MenuProps={{
-                  PaperProps: {
-                    style: {
-                      borderRadius: 12,
-                      boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
-                      marginTop: 8,
-                    },
-                  },
-                  anchorOrigin: {
-                    vertical: "bottom",
-                    horizontal: "right",
-                  },
-                  transformOrigin: {
-                    vertical: "top",
-                    horizontal: "right",
-                  },
-                }}
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  color: "#111111",
-                  minWidth: "60px",
-                  "& .MuiSelect-select": {
-                    padding: "2px 6px",
-                  },
-                }}
-              >
-                <MenuItem value="en">
-                  <Box component="span" ml={1}>
-                    EN
-                  </Box>
-                </MenuItem>
-                <MenuItem value="es">
-                  <Box component="span" ml={1}>
-                    ES
-                  </Box>
-                </MenuItem>
-              </Select>
-            </Box>
-          )}
+              <MenuItem value="en">
+                <Box component="span" className="font-medium" ml={0.5}>
+                  EN
+                </Box>
+              </MenuItem>
+              <MenuItem value="es">
+                <Box component="span" className="font-medium" ml={0.5}>
+                  ES
+                </Box>
+              </MenuItem>
+            </Select>
+          </Box>
 
           <IconButton
             sx={{ display: { xs: "flex", md: "none" }, color: "#111111" }}

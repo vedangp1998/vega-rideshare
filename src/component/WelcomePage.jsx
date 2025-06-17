@@ -1,5 +1,13 @@
-import React from "react";
-import { Box, Typography, Grid, useMediaQuery, useTheme } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  Grid,
+  useMediaQuery,
+  useTheme,
+  Alert,
+  Snackbar,
+} from "@mui/material";
 import DownloadButton from "../assets/Download-Appstore.svg";
 import CarIcon from "../assets/CarIcon.png";
 import { motion } from "framer-motion";
@@ -23,6 +31,17 @@ const WelcomePage = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery("(min-width:600px) and (max-width:899px)");
   const { t } = useTranslation();
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  const handleComingSoonClick = (e) => {
+    e.preventDefault();
+    setOpenSnackbar(true);
+  };
+
+  const handleSnackbarClose = (_, reason) => {
+    if (reason === "clickaway") return;
+    setOpenSnackbar(false);
+  };
 
   return (
     <Box sx={{ overflow: "hidden", width: "100%" }}>
@@ -123,6 +142,21 @@ const WelcomePage = () => {
               </Box>
             </motion.div>
 
+            <Snackbar
+              open={openSnackbar}
+              autoHideDuration={3000}
+              onClose={handleSnackbarClose}
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            >
+              <Alert
+                onClose={handleSnackbarClose}
+                severity="info"
+                sx={{ width: "100%" }}
+              >
+                {t("footer.comingSoon")}
+              </Alert>
+            </Snackbar>
+
             <motion.div
               variants={fadeUp}
               custom={3}
@@ -131,6 +165,7 @@ const WelcomePage = () => {
                 marginTop: isMobile ? "8px" : "16px",
                 width: isMobile ? "180px" : "250px",
               }}
+              onClick={handleComingSoonClick}
             >
               <img
                 src={DownloadButton || "/placeholder.svg"}

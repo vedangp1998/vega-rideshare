@@ -41,7 +41,7 @@ const IOSSwitch = styled((props) => (
 }));
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(false); // Default to daily
+  const [isMonthly, setIsMonthly] = useState(false); 
   const { t } = useTranslation();
 
   const dailyPlan = {
@@ -91,7 +91,7 @@ const Pricing = () => {
             color: "#002652",
           }}
         >
-          <span style={{ color: "#FF8C00" }}>{t("plansAndPricing")}</span>
+          <span style={{ color: "#FF8C00" }}>{t("plans")}</span>
         </Typography>
       </Box>
 
